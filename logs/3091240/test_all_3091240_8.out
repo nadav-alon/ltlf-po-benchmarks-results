@@ -1,0 +1,9 @@
+=========================================
+SLURM Job ID: 3091249
+Array Task ID: 8
+Running on node: cn17.hpc.pub.lan
+Testing: lucas solver with direct mode
+Shard: 8 of 16
+Output file: results/test_lucas_direct_shard_8.csv
+=========================================
+

@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3091326
+Array Task ID: 64
+Running on node: cn17.hpc.pub.lan
+Testing: christian solver with belief mode
+Shard: 0 of 16
+Output file: results/test_christian_belief_shard_0.csv
+=========================================
+
+Shard 0/16: Running 102 out of 1617 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_10.ltlf: Command '"/RG/rg-fried/alnadav5/ltlf-synth-unrel-input-aaai2025/Syft/build/bin/Syft" /tmp/tmpwhrrr3n6/coins_10.ltlf.christian.ltlf /tmp/tmpwhrrr3n6/coins_10.part.christian.part 0 belief' returned non-zero exit status 1.
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 101
+Error: 1
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

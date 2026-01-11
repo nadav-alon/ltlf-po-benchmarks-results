@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3091301
+Array Task ID: 39
+Running on node: cn17.hpc.pub.lan
+Testing: lucas solver with mso mode
+Shard: 7 of 16
+Output file: results/test_lucas_mso_shard_7.csv
+=========================================
+
+Shard 7/16: Running 101 out of 1617 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_9.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpplcrx17b/coins_9.ltlf.dfa.quant /tmp/tmpplcrx17b/coins_9.part.quant 0 full dfa' died with <Signals.SIGKILL: 9>.
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 1
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

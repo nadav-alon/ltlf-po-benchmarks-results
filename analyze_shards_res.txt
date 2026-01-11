@@ -1,0 +1,9 @@
+Performance Summary:
+Method             Total  Succ   Timeout     Error    Avg Time (ms)  
+-------------------------------------------------------
+christian_belief  1617   1615   0           2        628.73         
+christian_direct  1617   1615   0           2        609.76         
+christian_mso     1617   1617   0           0        420.03         
+belief            1617   842    758         17       5007.79        
+mso               1617   1611   0           6        438.43         
+projection        1617   433    663         521      737.35         

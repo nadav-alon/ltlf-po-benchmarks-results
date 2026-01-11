@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3097556
+SLURM Array Job ID: 3097478
+Array Task ID: 77
+Running on node: cn17.hpc.pub.lan
+Testing: christian:belief
+Shard: 13 of 16
+Output file: results/3097478/christian_belief/shard_13.csv
+=========================================
+
+Shard 13/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

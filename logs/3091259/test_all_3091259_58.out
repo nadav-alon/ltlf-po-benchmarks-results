@@ -1,0 +1,23 @@
+=========================================
+SLURM Job ID: 3091320
+Array Task ID: 58
+Running on node: cn18.hpc.pub.lan
+Testing: christian solver with direct mode
+Shard: 10 of 16
+Output file: results/test_christian_direct_shard_10.csv
+=========================================
+
+Shard 10/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 101
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

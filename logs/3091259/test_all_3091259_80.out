@@ -1,0 +1,23 @@
+=========================================
+SLURM Job ID: 3091342
+Array Task ID: 80
+Running on node: cn17.hpc.pub.lan
+Testing: christian solver with mso mode
+Shard: 0 of 16
+Output file: results/test_christian_mso_shard_0.csv
+=========================================
+
+Shard 0/16: Running 102 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 102
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

@@ -1,0 +1,9 @@
+=========================================
+SLURM Job ID: 3091258
+Array Task ID: 17
+Running on node: gpu4.hpc.pub.lab
+Testing: lucas solver with belief mode
+Shard: 1 of 16
+Output file: results/test_lucas_belief_shard_1.csv
+=========================================
+

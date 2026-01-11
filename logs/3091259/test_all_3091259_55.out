@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3091317
+Array Task ID: 55
+Running on node: cn17.hpc.pub.lan
+Testing: christian solver with direct mode
+Shard: 7 of 16
+Output file: results/test_christian_direct_shard_7.csv
+=========================================
+
+Shard 7/16: Running 101 out of 1617 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_9.ltlf: Command '"/RG/rg-fried/alnadav5/ltlf-synth-unrel-input-aaai2025/Syft/build/bin/Syft" /tmp/tmppotpqqdl/coins_9.ltlf.christian.ltlf /tmp/tmppotpqqdl/coins_9.part.christian.part 0 direct' returned non-zero exit status 1.
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 1
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

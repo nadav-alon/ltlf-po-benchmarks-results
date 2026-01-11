@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3091302
+Array Task ID: 40
+Running on node: cn22.hpc.pub.lab
+Testing: lucas solver with mso mode
+Shard: 8 of 16
+Output file: results/test_lucas_mso_shard_8.csv
+=========================================
+
+Shard 8/16: Running 101 out of 1617 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/seek_10.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmppk817snz/seek_10.ltlf.dfa.quant /tmp/tmppk817snz/seek_10.part.quant 0 full dfa' died with <Signals.SIGKILL: 9>.
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 1
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

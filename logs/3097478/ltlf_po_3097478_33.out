@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3097512
+SLURM Array Job ID: 3097478
+Array Task ID: 33
+Running on node: cn29.hpc.pub.lab
+Testing: lucas:mso
+Shard: 1 of 16
+Output file: results/3097478/lucas_mso/shard_1.csv
+=========================================
+
+Shard 1/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

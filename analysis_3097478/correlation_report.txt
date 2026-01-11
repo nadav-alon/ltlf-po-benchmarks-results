@@ -1,0 +1,46 @@
+Tool Agreement Analysis for Job 3097478
+========================================
+
+Agreement % between tools (on tests where both succeeded):
+Tool                       christ  christ  christ  lucas_  lucas_  lucas_  spot_l  spot_l  spot_l
+-------------------------------------------------------------------------------------------------
+christian_belief           100.0%  100.0%  100.0%   85.8%   73.0%  100.0%   83.5%   73.1%    0.0%
+christian_direct           100.0%  100.0%  100.0%   85.8%   73.0%  100.0%   83.5%   73.1%    0.0%
+christian_mso              100.0%  100.0%  100.0%   85.8%   73.0%  100.0%   83.5%   73.1%    0.0%
+lucas_belief-states         85.8%   85.8%   85.8%  100.0%  100.0%   88.4%   98.8%  100.0%   13.1%
+lucas_mso                   73.0%   73.0%   73.0%  100.0%  100.0%   88.4%   98.3%  100.0%   13.1%
+lucas_projection-based     100.0%  100.0%  100.0%   88.4%   88.4%  100.0%   90.4%   88.4%    0.0%
+spot_ltl                    83.5%   83.5%   83.5%   98.8%   98.3%   90.4%  100.0%   98.3%   12.1%
+spot_ltlf                   73.1%   73.1%   73.1%  100.0%  100.0%   88.4%   98.3%  100.0%   13.1%
+spot_ltlfilt                 0.0%    0.0%    0.0%   13.1%   13.1%    0.0%   12.1%   13.1%  100.0%
+
+Conflict count (where tools disagreed on realizability):
+Tool                       christ  christ  christ  lucas_  lucas_  lucas_  spot_l  spot_l  spot_l
+-------------------------------------------------------------------------------------------------
+christian_belief                0       0       0     119     435       0     166     435     808
+christian_direct                0       0       0     119     435       0     166     435     808
+christian_mso                   0       0       0     119     435       0     166     435     808
+lucas_belief-states           119     119     119       0       0      50      10       0     702
+lucas_mso                     435     435     435       0       0      50      17       0     702
+lucas_projection-based          0       0       0      50      50       0      41      50     424
+spot_ltl                      166     166     166      10      17      41       0      17     710
+spot_ltlf                     435     435     435       0       0      50      17       0     702
+spot_ltlfilt                  808     808     808     702     702     424     710     702       0
+
+Common coverage (number of tests both tools solved):
+Tool                       christ  christ  christ  lucas_  lucas_  lucas_  spot_l  spot_l  spot_l
+-------------------------------------------------------------------------------------------------
+christian_belief             1615    1615    1615     837    1611     432    1008    1615     808
+christian_direct             1615    1615    1615     837    1611     432    1008    1615     808
+christian_mso                1615    1615    1617     837    1611     432    1008    1615     808
+lucas_belief-states           837     837     837     837     835     432     831     837     808
+lucas_mso                    1611    1611    1611     835    1611     432    1006    1611     808
+lucas_projection-based        432     432     432     432     432     432     426     432     424
+spot_ltl                     1008    1008    1008     831    1006     426    1008    1008     808
+spot_ltlf                    1615    1615    1615     837    1611     432    1008    1615     808
+spot_ltlfilt                  808     808     808     808     808     424     808     808     808
+
+Detailed check: spot_ltlf vs lucas_mso
+  Shared solved tests: 1611
+  Agreement: 100.00%
+  Conflicts: 0

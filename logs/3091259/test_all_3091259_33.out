@@ -1,0 +1,23 @@
+=========================================
+SLURM Job ID: 3091295
+Array Task ID: 33
+Running on node: cn22.hpc.pub.lab
+Testing: lucas solver with mso mode
+Shard: 1 of 16
+Output file: results/test_lucas_mso_shard_1.csv
+=========================================
+
+Shard 1/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 101
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

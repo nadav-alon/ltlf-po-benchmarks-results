@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3095836
+Array Task ID: 103
+Running on node: cn28.hpc.pub.lab
+Testing: spot:ltlf
+Shard: 7 of 16
+Output file: results/test_3095836/spot_ltlf/shard_7.csv
+=========================================
+
+Shard 7/16: Running 101 out of 1617 tests.
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_9.ltlf
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 1
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

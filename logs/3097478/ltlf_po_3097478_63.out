@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3097542
+SLURM Array Job ID: 3097478
+Array Task ID: 63
+Running on node: cn30.hpc.pub.lan
+Testing: christian:direct
+Shard: 15 of 16
+Output file: results/3097478/christian_direct/shard_15.csv
+=========================================
+
+Shard 15/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

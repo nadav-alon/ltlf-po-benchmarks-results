@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3097570
+SLURM Array Job ID: 3097478
+Array Task ID: 91
+Running on node: cn20.hpc.pub.lan
+Testing: christian:mso
+Shard: 11 of 16
+Output file: results/3097478/christian_mso/shard_11.csv
+=========================================
+
+Shard 11/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

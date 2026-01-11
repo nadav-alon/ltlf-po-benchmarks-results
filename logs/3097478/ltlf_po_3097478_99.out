@@ -1,0 +1,24 @@
+=========================================
+SLURM Job ID: 3097578
+SLURM Array Job ID: 3097478
+Array Task ID: 99
+Running on node: cn20.hpc.pub.lan
+Testing: spot:ltlf
+Shard: 3 of 16
+Output file: results/3097478/spot_ltlf/shard_3.csv
+=========================================
+
+Shard 3/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

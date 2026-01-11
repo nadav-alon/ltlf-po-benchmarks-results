@@ -1,0 +1,197 @@
+=========================================
+SLURM Job ID: 3097509
+SLURM Array Job ID: 3097478
+Array Task ID: 30
+Running on node: cn29.hpc.pub.lab
+Testing: lucas:projection-based
+Shard: 14 of 16
+Output file: results/3097478/lucas_projection-based/shard_14.csv
+=========================================
+
+Shard 14/16: Running 101 out of 1617 tests.
+Missing part file for /tmp/tmpp0j7v8ch/peek_1_1_14.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpdsavezap/peek_1_1_29.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp2aqu81co/peek_1_1_43.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpqiagtdxi/peek_1_1_58.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpe2gs_ls_/peek_1_1_72.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp4n_3xb6o/peek_1_1_87.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpvgc9ltj3/peek_1_2_100.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpe80apudm/peek_1_2_25.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpjjecoxiw/peek_1_2_4.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp2_9d4k2p/peek_1_2_54.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpa2_9dot6/peek_1_2_69.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp46jq08q7/peek_1_2_83.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpgcruyblv/peek_1_2_98.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp6zk5jmek/peek_1_3_21.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpcrd0e72q/peek_1_3_36.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpotba6rcv/peek_1_3_50.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp__c17oip/peek_1_3_65.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpkqy5akfc/peek_1_3_8.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp9cd42jbp/peek_1_3_94.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpzludzci1/peek_1_4_18.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpamxvovj2/peek_1_4_32.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp4b30ebjv/peek_1_4_47.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpgqk87u_1/peek_1_4_61.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpyb809ez1/peek_1_4_76.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpbephi7p4/peek_1_4_90.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp4cvmltac/peek_2_1_14.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpmn4re8y9/peek_2_1_29.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_29.ltlf
+Missing part file for /tmp/tmpvnya5txm/peek_2_1_43.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_43.ltlf
+Missing part file for /tmp/tmpcl2j3ak4/peek_2_1_58.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_58.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpcl2j3ak4/peek_2_1_58.ltlf.dfa.rev.neg /tmp/tmpcl2j3ak4/peek_2_1_58.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpiujn7zk_/peek_2_1_72.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_72.ltlf
+Missing part file for /tmp/tmpykc3nl76/peek_2_1_87.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_87.ltlf
+Missing part file for /tmp/tmp4838esox/peek_2_2_100.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_100.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp4838esox/peek_2_2_100.ltlf.dfa.rev.neg /tmp/tmp4838esox/peek_2_2_100.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmp_9tcsgcd/peek_2_2_25.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmplzvtz__v/peek_2_2_4.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_4.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmplzvtz__v/peek_2_2_4.ltlf.dfa.rev.neg /tmp/tmplzvtz__v/peek_2_2_4.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpjhqofhgk/peek_2_2_54.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_54.ltlf
+Missing part file for /tmp/tmpziopn6t5/peek_2_2_69.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_69.ltlf
+Missing part file for /tmp/tmpmpflrx4h/peek_2_2_83.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_83.ltlf
+Missing part file for /tmp/tmp4y6b4kvr/peek_2_2_98.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_98.ltlf
+Missing part file for /tmp/tmpyips0ic0/peek_2_3_21.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_21.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpyips0ic0/peek_2_3_21.ltlf.dfa.rev.neg /tmp/tmpyips0ic0/peek_2_3_21.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmp5l3masa4/peek_2_3_36.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_36.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp5l3masa4/peek_2_3_36.ltlf.dfa.rev.neg /tmp/tmp5l3masa4/peek_2_3_36.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmperbkhq9k/peek_2_3_50.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_50.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmperbkhq9k/peek_2_3_50.ltlf.dfa.rev.neg /tmp/tmperbkhq9k/peek_2_3_50.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpxqbl1r2z/peek_2_3_65.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_65.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpxqbl1r2z/peek_2_3_65.ltlf.dfa.rev.neg /tmp/tmpxqbl1r2z/peek_2_3_65.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpddenyhk5/peek_2_3_8.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_8.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpddenyhk5/peek_2_3_8.ltlf.dfa.rev.neg /tmp/tmpddenyhk5/peek_2_3_8.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpkva9r4tb/peek_2_3_94.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_94.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpkva9r4tb/peek_2_3_94.ltlf.dfa.rev.neg /tmp/tmpkva9r4tb/peek_2_3_94.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmph4xszgwo/peek_2_4_18.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_18.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmph4xszgwo/peek_2_4_18.ltlf.dfa.rev.neg /tmp/tmph4xszgwo/peek_2_4_18.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpwl0ukl0u/peek_2_4_32.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_32.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpwl0ukl0u/peek_2_4_32.ltlf.dfa.rev.neg /tmp/tmpwl0ukl0u/peek_2_4_32.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmp8b__5vlo/peek_2_4_47.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_47.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp8b__5vlo/peek_2_4_47.ltlf.dfa.rev.neg /tmp/tmp8b__5vlo/peek_2_4_47.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpw1r8k3ed/peek_2_4_61.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_61.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpw1r8k3ed/peek_2_4_61.ltlf.dfa.rev.neg /tmp/tmpw1r8k3ed/peek_2_4_61.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpahkcpka3/peek_2_4_76.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_76.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpahkcpka3/peek_2_4_76.ltlf.dfa.rev.neg /tmp/tmpahkcpka3/peek_2_4_76.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpoxuodb_3/peek_2_4_90.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_90.ltlf
+Missing part file for /tmp/tmpnondwrv1/peek_3_1_14.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_14.ltlf
+Missing part file for /tmp/tmpjltbd3di/peek_3_1_29.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_29.ltlf
+Missing part file for /tmp/tmp7p7ykagn/peek_3_1_43.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_43.ltlf
+Missing part file for /tmp/tmpcn6379wb/peek_3_1_58.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_58.ltlf
+Missing part file for /tmp/tmpiaab9chq/peek_3_1_72.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_72.ltlf
+Missing part file for /tmp/tmpe_q50b8r/peek_3_1_87.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_87.ltlf
+Missing part file for /tmp/tmppwwj0xn9/peek_3_2_100.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_100.ltlf
+Missing part file for /tmp/tmp_9vtqy_a/peek_3_2_25.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_25.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp_9vtqy_a/peek_3_2_25.ltlf.dfa.rev.neg /tmp/tmp_9vtqy_a/peek_3_2_25.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpe1bzssjj/peek_3_2_4.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_4.ltlf
+Missing part file for /tmp/tmp8hr1ql59/peek_3_2_54.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_54.ltlf
+Missing part file for /tmp/tmpkl_mycxi/peek_3_2_69.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_69.ltlf
+Missing part file for /tmp/tmpqcn645q0/peek_3_2_83.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_83.ltlf
+Missing part file for /tmp/tmpkkwk2ttx/peek_3_2_98.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_98.ltlf
+Missing part file for /tmp/tmphm5crd0p/peek_3_3_21.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_21.ltlf
+Missing part file for /tmp/tmpwpnh9_f1/peek_3_3_36.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_36.ltlf
+Missing part file for /tmp/tmp_1dw9_j5/peek_3_3_50.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_50.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp_1dw9_j5/peek_3_3_50.ltlf.dfa.rev.neg /tmp/tmp_1dw9_j5/peek_3_3_50.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpsl_3j89t/peek_3_3_65.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_65.ltlf
+Missing part file for /tmp/tmp6aj5ixff/peek_3_3_8.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_8.ltlf
+Missing part file for /tmp/tmpxwmswzkq/peek_3_3_94.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_94.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpxwmswzkq/peek_3_3_94.ltlf.dfa.rev.neg /tmp/tmpxwmswzkq/peek_3_3_94.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpaq08zpsj/peek_3_4_18.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_18.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpaq08zpsj/peek_3_4_18.ltlf.dfa.rev.neg /tmp/tmpaq08zpsj/peek_3_4_18.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpgkqxlkj2/peek_3_4_32.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_32.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpgkqxlkj2/peek_3_4_32.ltlf.dfa.rev.neg /tmp/tmpgkqxlkj2/peek_3_4_32.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmp1elb9r01/peek_3_4_47.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_47.ltlf
+Missing part file for /tmp/tmp2pxow3gn/peek_3_4_61.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_61.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp2pxow3gn/peek_3_4_61.ltlf.dfa.rev.neg /tmp/tmp2pxow3gn/peek_3_4_61.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpwjt2tafw/peek_3_4_76.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_76.ltlf
+Missing part file for /tmp/tmpclj_r7dl/peek_3_4_90.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_90.ltlf
+Missing part file for /tmp/tmpd0ofwuyb/peek_4_1_14.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_14.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpd0ofwuyb/peek_4_1_14.ltlf.dfa.rev.neg /tmp/tmpd0ofwuyb/peek_4_1_14.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmp0_4_38kd/peek_4_1_29.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_29.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp0_4_38kd/peek_4_1_29.ltlf.dfa.rev.neg /tmp/tmp0_4_38kd/peek_4_1_29.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpcj_580ln/peek_4_1_43.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_43.ltlf
+Missing part file for /tmp/tmpt5jnpwza/peek_4_1_58.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_58.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpt5jnpwza/peek_4_1_58.ltlf.dfa.rev.neg /tmp/tmpt5jnpwza/peek_4_1_58.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpfdjxk42_/peek_4_1_72.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_72.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpfdjxk42_/peek_4_1_72.ltlf.dfa.rev.neg /tmp/tmpfdjxk42_/peek_4_1_72.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpz7c3wjul/peek_4_1_87.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_87.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpz7c3wjul/peek_4_1_87.ltlf.dfa.rev.neg /tmp/tmpz7c3wjul/peek_4_1_87.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmphjwojtgg/peek_4_2_100.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_100.ltlf
+Missing part file for /tmp/tmpsulgan_r/peek_4_2_25.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_25.ltlf
+Missing part file for /tmp/tmpk11jclt1/peek_4_2_4.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_4.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpk11jclt1/peek_4_2_4.ltlf.dfa.rev.neg /tmp/tmpk11jclt1/peek_4_2_4.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpa9yxzh_0/peek_4_2_54.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_54.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpa9yxzh_0/peek_4_2_54.ltlf.dfa.rev.neg /tmp/tmpa9yxzh_0/peek_4_2_54.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpfojcpi35/peek_4_2_69.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_69.ltlf
+Missing part file for /tmp/tmpz7o28rn4/peek_4_2_83.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_83.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpz7o28rn4/peek_4_2_83.ltlf.dfa.rev.neg /tmp/tmpz7o28rn4/peek_4_2_83.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpgxjdvsj3/peek_4_2_98.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_98.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpgxjdvsj3/peek_4_2_98.ltlf.dfa.rev.neg /tmp/tmpgxjdvsj3/peek_4_2_98.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmp1uhzc47i/peek_4_3_21.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_21.ltlf
+Missing part file for /tmp/tmp8taym14b/peek_4_3_36.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_36.ltlf
+Missing part file for /tmp/tmpnyeg7_3r/peek_4_3_50.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_50.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpnyeg7_3r/peek_4_3_50.ltlf.dfa.rev.neg /tmp/tmpnyeg7_3r/peek_4_3_50.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpxbrn1ec3/peek_4_3_65.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_65.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpxbrn1ec3/peek_4_3_65.ltlf.dfa.rev.neg /tmp/tmpxbrn1ec3/peek_4_3_65.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpcmor0om8/peek_4_3_8.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_8.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpcmor0om8/peek_4_3_8.ltlf.dfa.rev.neg /tmp/tmpcmor0om8/peek_4_3_8.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmp_xcclwoq/peek_4_3_94.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_94.ltlf
+Missing part file for /tmp/tmp0r3dm324/peek_4_4_18.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_18.ltlf
+Missing part file for /tmp/tmpz_q0z4cl/peek_4_4_32.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_32.ltlf
+Missing part file for /tmp/tmpb_lifrwi/peek_4_4_47.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_47.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpb_lifrwi/peek_4_4_47.ltlf.dfa.rev.neg /tmp/tmpb_lifrwi/peek_4_4_47.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmp0w6vsv98/peek_4_4_61.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_61.ltlf
+Missing part file for /tmp/tmp8ix82565/peek_4_4_76.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_76.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp8ix82565/peek_4_4_76.ltlf.dfa.rev.neg /tmp/tmp8ix82565/peek_4_4_76.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+Missing part file for /tmp/tmpjix630uo/peek_4_4_90.ltlf, missing suffix .rev.neg
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_90.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpjix630uo/peek_4_4_90.ltlf.dfa.rev.neg /tmp/tmpjix630uo/peek_4_4_90.part 0 partial cordfa' died with <Signals.SIGKILL: 9>., b''
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 38
+Other: 27
+Error: 35
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

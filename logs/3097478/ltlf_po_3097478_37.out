@@ -1,0 +1,25 @@
+=========================================
+SLURM Job ID: 3097516
+SLURM Array Job ID: 3097478
+Array Task ID: 37
+Running on node: cn29.hpc.pub.lab
+Testing: lucas:mso
+Shard: 5 of 16
+Output file: results/3097478/lucas_mso/shard_5.csv
+=========================================
+
+Shard 5/16: Running 101 out of 1617 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_7.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp5oue3o3a/coins_7.ltlf.dfa.quant /tmp/tmp5oue3o3a/coins_7.part.quant 0 full dfa' died with <Signals.SIGKILL: 9>., b'The number of explicit states: 0\n'
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 1
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

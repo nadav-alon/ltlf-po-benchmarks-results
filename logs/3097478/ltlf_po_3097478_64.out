@@ -1,0 +1,25 @@
+=========================================
+SLURM Job ID: 3097543
+SLURM Array Job ID: 3097478
+Array Task ID: 64
+Running on node: cn30.hpc.pub.lan
+Testing: christian:belief
+Shard: 0 of 16
+Output file: results/3097478/christian_belief/shard_0.csv
+=========================================
+
+Shard 0/16: Running 102 out of 1617 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_10.ltlf: Command '"/RG/rg-fried/alnadav5/ltlf-synth-unrel-input-aaai2025/Syft/build/bin/Syft" /tmp/tmpnysj9_is/coins_10.ltlf.christian.ltlf /tmp/tmpnysj9_is/coins_10.part.christian.part 0 belief' returned non-zero exit status 1., b'./ltlf2fol NNF /tmp/tmpnysj9_is/coins_10.ltlf.christian.ltlf.main > /tmp/tmpnysj9_is/coins_10.ltlf.christian.ltlf.main.fol\n./ltlf2fol NNF /tmp/tmpnysj9_is/coins_10.ltlf.christian.ltlf.backup >/tmp/tmpnysj9_is/coins_10.ltlf.christian.ltlf.backup.fol\ntoken too large, exceeds YYLMAX\nError running mona for main\n'
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 1
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

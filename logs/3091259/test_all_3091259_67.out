@@ -1,0 +1,23 @@
+=========================================
+SLURM Job ID: 3091329
+Array Task ID: 67
+Running on node: cn22.hpc.pub.lab
+Testing: christian solver with belief mode
+Shard: 3 of 16
+Output file: results/test_christian_belief_shard_3.csv
+=========================================
+
+Shard 3/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 101
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================
