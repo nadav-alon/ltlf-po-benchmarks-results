@@ -1,48 +1,65 @@
-# Results & Analysis Benchmarks
+# LTLf Benchmark Analysis Suite
 
-This repository contains the raw results, logs, and analysis scripts for the LTLf Reactive Synthesis benchmarks.
+This directory contains the tools for processing and visualizing reactive synthesis benchmark results.
 
-## Directory Structure
+## Folder Structure
 
-- `src/`: Python scripts for data processing and visualization.
+- `src/`: Core analysis scripts (**the primary tools listed below**).
 - `data/`:
-    - `results/`: Sharded CSV files organized by SLURM Job ID.
+    - `results/`: Sharded CSV output from SLURM jobs (organized by Job ID).
     - `logs/`: SLURM output/error logs.
-    - `snapshots/`: Snapshot CSV files for specific tool versions.
 - `reports/`:
-    - `figures/`: Generated performance graphs (.png).
-    - `text/`: Error lists, inconsistency reports, and quantitative summaries.
-    - `analysis_runs/`: Deep-dive analysis for specific high-interest jobs.
-- `archive/`: Deprecated or backup files.
+    - `figures/`: Generated performance plots (.png).
+    - `text/`: Comprehensive error lists and consistency reports.
+- `archive/`: Old scripts and deprecated results.
 
-## Common Operations
+---
 
-### 1. Basic Analysis (Consistency & Success Rates)
-To see a summary of performance and check if tools agree on realizability for a specific job:
-```bash
-python src/analyze_shards.py --job-id <JOB_ID>
+## 🛠 The "Power Tools" (in `src/`)
+
+### 1. `python3 src/analyze.py`
+**Purpose:** High-level summary of success rates and semantic consistency.
+- **Usage:** `python3 src/analyze.py --job-id <ID>`
+- **Output:** Performance table (Total, Success, Timeout, Error, Avg Time) and a conflict warning if tools disagree on realizability.
+- **Detail:** Use `--output-inconsistent <file>` to save a list of tests where tools disagreed.
+
+### 2. `python3 src/report_errors.py`
+**Purpose:** Deep dive into why tests failed.
+- **Usage:** `python3 src/report_errors.py --job-id <ID> --list`
+- **Output:** Summary of errors/timeouts per tool.
+- **Options:** 
+    - `--list`: Prints the full path of every file that hit an "Error" (Status -1).
+    - `--csv <file>`: Exports every failure to a flat CSV for further filtering.
+
+### 3. `python3 src/visualize.py`
+**Purpose:** Generate all performance graphs.
+- **Usage:** `python3 src/visualize.py --job-id <ID>`
+- **Output:** Saves multiple `.png` files to `reports/figures/`, including individual tool scaling and cross-tool comparisons.
+
+### 4. `python3 src/cross_check.py`
+**Purpose:** Compare two different specific runs (e.g., comparing a new version of Lucas against a stable Spot run).
+- **Usage:** `python3 src/cross_check.py --job-a <ID1> --tool-a <NAME1> --job-b <ID2> --tool-b <NAME2>`
+- **Output:** Lists only the specific tests where the two tools disagreed on realizability.
+
+---
+
+## Tool Naming Mapping (for `analyze.py`)
+- `l_bst`: Lucas Belief States
+- `l_prj`: Lucas Projection-Based
+- `l_mso`: Lucas MSO
+- `c_bel`: Christian Belief
+- `c_dir`: Christian Direct
+- `s_ltl`: Spot LTL
+- `s_ltl`: Spot LTLf
+
+---
+
+## ⚡️ Zsh Autocomplete (Job IDs)
+
+To enable tab-completion for `--job-id` (so it automatically suggests Job IDs found in `data/results/`), add the following to your `.zshrc`:
+
+```zsh
+source /home/cowclaw/results_shards/src/completion.zsh
 ```
 
-### 2. Generate Plots
-To generate performance comparison graphs (saved to `reports/figures/`):
-```bash
-python src/plot_results.py --job-id <JOB_ID>
-```
-
-### 3. Collect Errors
-To extract a list of all failing tests (Status -1):
-```bash
-python src/extract_errors.py
-```
-
-### 4. Compare Results
-To compare one job against a "Source of Truth" (configurable inside the script):
-```bash
-python src/compare_results.py
-```
-
-## Note on Status Codes
-- `1`: Realizable
-- `0`: Unrealizable
-- `-1`: Error (Infrastructure, Parser, etc.)
-- `-2`: Timeout
+Now you can type `src/analyze.py --job-id [TAB]` and see your results folders!
