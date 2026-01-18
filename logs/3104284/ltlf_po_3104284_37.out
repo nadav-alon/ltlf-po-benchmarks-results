@@ -1,0 +1,25 @@
+=========================================
+SLURM Job ID: 3104290
+SLURM Array Job ID: 3104284
+Array Task ID: 37
+Running on node: cn28.hpc.pub.lab
+Testing: lucas:mso
+Shard: 5 of 16
+Output file: results/3104284/lucas_mso/shard_5.csv
+=========================================
+
+Shard 5/16: Running 101 out of 1617 tests.
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_7.ltlf
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 1
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================
