@@ -1,0 +1,14 @@
+
+Found 1184 failed instances across 1 tools.
+
+Tool Path                                Errors     Timeouts  
+-----------------------------------------------------------------
+lucas_projection-based                   2          1182      
+
+================================================================================
+DETAILED ERROR LIST (Status -1)
+================================================================================
+
+### lucas_projection-based
+  - /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_10.ltlf
+  - /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_9.ltlf
