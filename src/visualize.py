@@ -12,6 +12,18 @@ RESULTS_DIR = os.path.join(BASE_DIR, "data/results")
 OUTPUT_DIR = os.path.join(BASE_DIR, "reports/figures")
 TIMEOUT_PENALTY_MS = 300000
 
+def get_job_label(job_id):
+    import json
+    label_file = "/home/cowclaw/results_shards/data/job_labels.json"
+    if not job_id: return "Combined Data"
+    if os.path.exists(label_file):
+        try:
+            with open(label_file, 'r') as f:
+                labels = json.load(f)
+                return labels.get(job_id, job_id)
+        except: pass
+    return job_id
+
 def parse_tool(filepath):
     """Extract implementation and mode from directory name."""
     dir_name = os.path.basename(os.path.dirname(filepath))
@@ -77,7 +89,8 @@ def generate_plots(df, job_id=None):
         if impl == 'unknown': continue
         filename = os.path.join(target_dir, f"results_{impl}.png")
         fig = plt.figure(figsize=(15, 12))
-        fig.suptitle(f"Performance: {impl.capitalize()} ({job_folder})", fontsize=16, fontweight='bold')
+        label_text = get_job_label(job_id)
+        fig.suptitle(f"Performance: {impl.capitalize()} ({label_text})", fontsize=16, fontweight='bold')
         
         # (a) Moving-Target
         ax1 = fig.add_subplot(221)
@@ -120,7 +133,8 @@ def generate_plots(df, job_id=None):
     if len(df['impl'].unique()) > 1:
         comp_file = os.path.join(target_dir, "comparison.png")
         fig = plt.figure(figsize=(15, 12))
-        fig.suptitle(f"Direct Comparison: Christian (Solid), Lucas (Dashed), Spot (Dotted) ({job_folder})", fontsize=18, fontweight='bold')
+        label_text = get_job_label(job_id)
+        fig.suptitle(f"Direct Comparison: Christian (Solid), Lucas (Dashed), Spot (Dotted) ({label_text})", fontsize=18, fontweight='bold')
         
         lucas_map = {'belief-states': 'Belief States', 'projection-based': 'Projection-Based', 'mso': 'MSO', 'belief': 'Projection-Based', 'direct': 'Belief States'}
         christian_map = {'belief': 'Belief', 'direct': 'Direct', 'mso': 'MSO'}

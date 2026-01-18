@@ -10,15 +10,32 @@ def get_label(impl, mode):
     if impl == 'lucas':
         if mode == 'belief-states': return "l_bst"
         elif mode == 'projection-based': return "l_prj"
-        elif mode in ['belief', 'direct']: return f"l_{mode[0]}*" # Handle legacy
-        return f"l_{mode[:3]}"
+        elif mode == 'mso': return "l_mso"
+        elif mode == 'belief': return "l_bel"
+        elif mode == 'direct': return "l_dir"
+        return f"l_{mode}"
     elif impl == 'christian':
         if mode == 'belief': return "c_bel"
         elif mode == 'direct': return "c_dir"
-        return f"c_{mode[:3]}"
+        elif mode == 'mso': return "c_mso"
+        return f"c_{mode}"
     elif impl == 'spot':
-        return f"s_{mode[:3]}"
-    return f"{impl[0]}_{mode[:3]}"
+        if mode == 'ltl': return "s_ltl"
+        elif mode == 'ltlf': return "s_ltf"
+        elif mode == 'ltlfilt': return "s_flt"
+        return f"s_{mode}"
+    return f"{impl[0]}_{mode}" if impl else f"?_{mode}"
+
+def get_job_label(job_id):
+    import json
+    label_file = "/home/cowclaw/results_shards/data/job_labels.json"
+    if os.path.exists(label_file):
+        try:
+            with open(label_file, 'r') as f:
+                labels = json.load(f)
+                return labels.get(job_id, job_id)
+        except: pass
+    return job_id
 
 def load_shards(results_dir, job_id=None):
     """Loads all CSV shards and groups them by tool (impl_mode)."""
@@ -55,10 +72,12 @@ def load_shards(results_dir, job_id=None):
             
     return grouped_results
 
-def run_analysis(grouped_results, output_inconsistent=None):
+def run_analysis(grouped_results, job_id=None, output_inconsistent=None):
     """Calculates summary stats and checks for semantic consistency."""
     test_data = defaultdict(dict)
     summary = []
+    
+    label_text = get_job_label(job_id) if job_id else "All Background Data"
 
     for tool_key, data in sorted(grouped_results.items()):
         impl, mode = (tool_key.split('_', 1) + [""])[:2]
@@ -81,7 +100,8 @@ def run_analysis(grouped_results, output_inconsistent=None):
             test_data[r['test']][lbl] = (r['status'], r['time'])
 
     # 1. Print Performance Table
-    print("\n" + "="*70)
+    print(f"\nAnalysis for: {label_text}")
+    print("="*70)
     print(f"{'Tool':<10} {'Total':<8} {'Succ':<8} {'TO':<8} {'Err':<8} {'Avg Time (ms)':<15}")
     print("-" * 70)
     for s in summary:
@@ -120,6 +140,6 @@ if __name__ == "__main__":
 
     results = load_shards(args.results_dir, args.job_id)
     if results:
-        run_analysis(results, args.output_inconsistent)
+        run_analysis(results, job_id=args.job_id, output_inconsistent=args.output_inconsistent)
     else:
         print("No results found.")

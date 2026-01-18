@@ -3,8 +3,9 @@
 Tool       Total    Succ     TO       Err      Avg Time (ms)  
 ----------------------------------------------------------------------
 s_ltl      1617     998      319      300      3449.12        
-s_ltl      1617     1615     2        0        21.12          
-s_ltl      1617     808      809      0        1331.23        
+s_ltf      1617     1615     2        0        21.12          
+s_flt      1617     808      809      0        1331.23        
 ======================================================================
 
-[+] All tools agreed on results (0/1).
+[!] WARNING: 719 semantic inconsistencies found!
+Run with --output-inconsistent <file> for details.

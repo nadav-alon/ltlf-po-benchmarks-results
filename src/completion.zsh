@@ -1,46 +1,74 @@
 # Zsh autocomplete for LTLf Benchmarks
 _ltlf_benchmarks() {
-    local -a jobs tools_a tools_b
     local results_dir="/home/cowclaw/results_shards/data/results"
+    local label_file="/home/cowclaw/results_shards/data/job_labels.json"
     
-    # Get all directory names in the results folder (Job IDs)
-    if [[ -d $results_dir ]]; then
-        jobs=($(ls -1 $results_dir))
+    # 1. Load Job IDs and Labels safely
+    local -a jobs
+    if [[ -d "$results_dir" ]]; then
+        local raw
+        raw=$(python3 -c "
+import json, os
+res_dir = '$results_dir'
+lbl_file = '$label_file'
+labels = {}
+if os.path.exists(lbl_file):
+    try:
+        with open(lbl_file) as f: labels = json.load(f)
+    except: pass
+for j in sorted(os.listdir(res_dir)):
+    if os.path.isdir(os.path.join(res_dir, j)):
+        d = labels.get(j, '').replace(':', ' ')
+        print(f'{j}:{d}' if d else j)
+" 2>/dev/null)
+        # Split into array by line
+        while IFS= read -r line; do
+            [[ -n "$line" ]] && jobs+=("$line")
+        done <<< "$raw"
     fi
 
-    # Helper to get tools from a specific job id argument on the command line
-    # Usage: _get_tools_for_job <job_id_val>
-    _get_tools_for_job() {
-        if [[ -n $1 && -d "$results_dir/$1" ]]; then
-            echo $(ls -1 "$results_dir/$1")
-        fi
-    }
-
-    case $words[1] in
-        *analyze.py|*report_errors.py|*visualize.py)
-            _arguments \
-                '--job-id[The Job ID to process]:job id:($jobs)' \
-                '--results-dir[Path to results]:directory:_files -/' \
-                '*::files:_files'
+    # 2. Check what flag we are completing for
+    local prev="$words[CURRENT-1]"
+    
+    case "$prev" in
+        --job-id|--job-a|--job-b)
+            _describe -t jobs 'job ids' jobs
+            return
             ;;
-        *cross_check.py)
-            # Find what jobs are already on the command line to narrow tool choices
-            local job_a_val=${words[$words[(i)--job-a]+1]}
-            local job_b_val=${words[$words[(i)--job-b]+1]}
-            
-            [[ $job_a_val != "--job-a" ]] && tools_a=($(_get_tools_for_job $job_a_val))
-            [[ $job_b_val != "--job-b" ]] && tools_b=($(_get_tools_for_job $job_b_val))
-
-            _arguments \
-                '--job-a[First Job ID]:job id:($jobs)' \
-                '--job-b[Second Job ID]:job id:($jobs)' \
-                '--tool-a[First Tool Name]:tool name:($tools_a)' \
-                '--tool-b[Second Tool Name]:tool name:($tools_b)' \
-                '--output[Save conflicts to CSV]:file:_files' \
-                '*::files:_files'
+        --tool-a|--tool-b)
+            # Find the associated job ID on the command line
+            local job_val=""
+            local i
+            for ((i=CURRENT-1; i>0; i--)); do
+                if [[ "$words[i]" == "--job-a" || "$words[i]" == "--job-b" || "$words[i]" == "--job-id" ]]; then
+                    job_val="$words[i+1]"
+                    break
+                fi
+            done
+            if [[ -n "$job_val" && -d "$results_dir/$job_val" ]]; then
+                local -a tools
+                tools=($(ls -1 "$results_dir/$job_val"))
+                _describe -t tools 'tools' tools
+                return
+            fi
             ;;
     esac
+
+    # 3. Default: Complete the flags themselves
+    local -a opts
+    opts=(
+        '--job-id:ID of the job to analyze'
+        '--job-a:First job ID for comparison'
+        '--job-b:Second job ID for comparison'
+        '--tool-a:Tool name for first job'
+        '--tool-b:Tool name for second job'
+        '--results-dir:Path to results directory'
+        '--list:List all failing test instances'
+        '--csv:Export failures to a CSV file'
+        '--output:Output filename'
+        '--output-inconsistent:File to save discrepancies'
+    )
+    _describe -t options 'options' opts
 }
 
-# Register the completion for the scripts
 compdef _ltlf_benchmarks src/analyze.py src/report_errors.py src/visualize.py src/cross_check.py
