@@ -4,30 +4,28 @@ import glob
 from collections import defaultdict
 
 def extract_errors(results_dir):
-    path_pattern = os.path.join(results_dir, "**", "test_*.csv")
+    path_pattern = os.path.join(results_dir, "**", "shard_*.csv")
     shard_files = glob.glob(path_pattern, recursive=True)
     
     # tool -> error_type -> [tests]
     errors = defaultdict(lambda: defaultdict(list))
     
     for filepath in sorted(shard_files):
-        filename = os.path.basename(filepath)
-        # Filename format: test_<impl>_<method>_shard_<num>.csv
-        parts = filename.replace('.csv', '').split('_')
-        if len(parts) < 3: continue
-        impl = parts[1]
-        method = parts[2]
-        tool = f"{impl}_{method}"
+        dir_name = os.path.basename(os.path.dirname(filepath))
+        tool = dir_name
         
         try:
             with open(filepath, 'r') as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    status = int(float(row['status']))
-                    if status == -1:
-                        errors[tool]['Error'].append(row['test'])
-                    elif status == -2:
-                        errors[tool]['Timeout'].append(row['test'])
+                    try:
+                        status = int(float(row['status']))
+                        if status == -1:
+                            errors[tool]['Error'].append(row['test'])
+                        elif status == -2:
+                            errors[tool]['Timeout'].append(row['test'])
+                    except (ValueError, KeyError, TypeError):
+                        continue
         except Exception as e:
             print(f"Error reading {filepath}: {e}")
 
@@ -48,7 +46,7 @@ def get_label(impl, mode):
         else: return f"c_{mode[:3]}"
 
 if __name__ == "__main__":
-    results_dir = "/home/cowclaw/results_shards/results"
+    results_dir = "/home/cowclaw/results_shards/data/results"
     errors = extract_errors(results_dir)
     
     # Process into labeled errors

@@ -299,16 +299,21 @@ def generate_comparison_graph(df, filename):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Plot benchmark results.")
     parser.add_argument("--job-id", help="Specific job ID folder to plot (results/<job_id>)")
-    parser.add_argument("--results-dir", default="/home/cowclaw/results_shards/results", help="Directory containing results")
+    parser.add_argument("--results-dir", default="/home/cowclaw/results_shards/data/results", help="Directory containing results")
     args = parser.parse_args()
 
     data = load_data(args.results_dir, job_id=args.job_id)
     if not data.empty:
+        BASE_DIR = "/home/cowclaw/results_shards"
         suffix = f"_{args.job_id}" if args.job_id else ""
-        generate_implementation_graph(data, 'christian', f'results_graph_christian{suffix}.png')
-        generate_implementation_graph(data, 'lucas', f'results_graph_lucas{suffix}.png')
-        generate_implementation_graph(data, 'spot', f'results_graph_spot{suffix}.png')
-        generate_comparison_graph(data, f'results_comparison{suffix}.png')
+        
+        output_dir = os.path.join(BASE_DIR, "reports/figures")
+        os.makedirs(output_dir, exist_ok=True)
+        
+        generate_implementation_graph(data, 'christian', os.path.join(output_dir, f'results_graph_christian{suffix}.png'))
+        generate_implementation_graph(data, 'lucas', os.path.join(output_dir, f'results_graph_lucas{suffix}.png'))
+        generate_implementation_graph(data, 'spot', os.path.join(output_dir, f'results_graph_spot{suffix}.png'))
+        generate_comparison_graph(data, os.path.join(output_dir, f'results_comparison{suffix}.png'))
     else:
         if args.job_id:
             print(f"No data found for job {args.job_id} in {args.results_dir}/{args.job_id}")

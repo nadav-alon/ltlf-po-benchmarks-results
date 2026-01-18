@@ -160,7 +160,7 @@ def print_analysis(grouped_results, inconsistent_output=None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Analyze benchmark shards.")
     parser.add_argument("--job-id", help="Specific job ID folder to analyze (results/<job_id>)")
-    parser.add_argument("--results-dir", default="/home/cowclaw/results_shards/results", help="Directory containing results")
+    parser.add_argument("--results-dir", default="/home/cowclaw/results_shards/data/results", help="Directory containing results")
     parser.add_argument("--output-inconsistent", help="File to write the full list of inconsistencies to")
     args = parser.parse_args()
 

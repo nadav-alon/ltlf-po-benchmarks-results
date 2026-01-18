@@ -3,7 +3,7 @@ import os
 from collections import defaultdict
 
 BASE_DIR = "/home/cowclaw/results_shards"
-RESULTS_BASE = os.path.join(BASE_DIR, "results")
+RESULTS_BASE = os.path.join(BASE_DIR, "data/results")
 
 TRUTH_JOB_ID = "3104284"
 TRUTH_TOOL = "lucas_mso"
@@ -92,7 +92,7 @@ def main():
             print(f"{inc['test']:<60} | {inc['truth_status']:<20} | {inc['compare_tool']:<20} | {inc['compare_status']}")
             
         # Also save to file
-        out_file = "inconsistencies.csv"
+        out_file = os.path.join(BASE_DIR, "reports/text/inconsistencies.csv")
         print(f"\nSaving inconsistencies to {out_file}...")
         with open(out_file, 'w', newline='') as f:
             fieldnames = ['test', 'truth_tool', 'truth_status', 'compare_tool', 'compare_status']
