@@ -1,0 +1,10 @@
+{
+    "moore": {
+        "source_of_truth": "lucas_mso",
+        "job_id": "3104284"
+    },
+    "mealy": {
+        "source_of_truth": "lucas_mso",
+        "job_id": "3104605"
+    }
+}

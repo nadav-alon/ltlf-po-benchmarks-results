@@ -1,0 +1,54 @@
+name: Analyze New Data
+
+on:
+  push:
+    paths:
+      - 'data/results/**'
+      - 'data/logs/**'
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Find changed Job IDs
+        id: jobs
+        run: |
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            # New branch, compare against parent
+            DIFF_REF="HEAD^"
+          else
+            DIFF_REF="${{ github.event.before }}"
+          fi
+          
+          # Find directories under data/results/ that have modified files
+          CHANGED_JOBS=$(git diff --name-only $DIFF_REF HEAD | grep 'data/results/' | cut -d'/' -f3 | sort -u | tr '\n' ' ')
+          echo "jobs=$CHANGED_JOBS" >> $GITHUB_OUTPUT
+          echo "Identified jobs: $CHANGED_JOBS"
+
+      - name: Generate Report
+        if: steps.jobs.outputs.jobs != ''
+        run: |
+          python3 src/report_generator.py --job-ids ${{ steps.jobs.outputs.jobs }} --output report.md
+
+      - name: Upload Report
+        if: steps.jobs.outputs.jobs != ''
+        uses: actions/upload-artifact@v3
+        with:
+          name: analysis-report
+          path: report.md
+
+      - name: Comment on PR (Optional)
+        if: github.event_name == 'pull_request' && steps.jobs.outputs.jobs != ''
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          filePath: report.md
