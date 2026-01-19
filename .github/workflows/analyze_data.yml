@@ -54,6 +54,7 @@ jobs:
         if: steps.jobs.outputs.jobs != ''
         run: |
           python3 src/report_generator.py --job-ids ${{ steps.jobs.outputs.jobs }} --output report.md
+          cat report.md >> $GITHUB_STEP_SUMMARY
 
       - name: Upload Report
         if: steps.jobs.outputs.jobs != ''
