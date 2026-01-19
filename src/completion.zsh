@@ -4,39 +4,50 @@ _ltlf_benchmarks() {
     local label_file="/home/cowclaw/results_shards/data/job_labels.json"
     
     # 1. Load Job IDs and Labels safely
-    local -a jobs
+    local -A labels
+    local -a job_ids
     if [[ -d "$results_dir" ]]; then
-        local raw
-        raw=$(python3 -c "
-import json, os
-res_dir = '$results_dir'
-lbl_file = '$label_file'
-labels = {}
-if os.path.exists(lbl_file):
-    try:
-        with open(lbl_file) as f: labels = json.load(f)
-    except: pass
-for j in sorted(os.listdir(res_dir)):
-    if os.path.isdir(os.path.join(res_dir, j)):
-        d = labels.get(j, '').replace(':', ' ')
-        print(f'{j}:{d}' if d else j)
-" 2>/dev/null)
-        # Split into array by line
-        while IFS= read -r line; do
-            [[ -n "$line" ]] && jobs+=("$line")
-        done <<< "$raw"
+        job_ids=($(ls -1 "$results_dir"))
+        if [[ -f "$label_file" ]]; then
+            # Load labels into an associative array
+            local k v
+            while IFS= read -r line; do
+                k="${line%%:*}"
+                v="${line#*:}"
+                labels[$k]="$v"
+            done <<< "$(python3 -c "import json; d=json.load(open('$label_file')); [print(f'{k}:{v}') for k,v in d.items()]" 2>/dev/null)"
+        fi
     fi
 
-    # 2. Check what flag we are completing for
     local prev="$words[CURRENT-1]"
-    
+    local cur="$words[CURRENT]"
+
     case "$prev" in
         --job-id|--job-a|--job-b)
-            _describe -t jobs 'job ids' jobs
+            # Filter matches by checking both ID and Description
+            local -a display_list val_list
+            local id desc
+            for id in $job_ids; do
+                desc="${labels[$id]}"
+                # If current input matches either ID or Description (case-insensitive)
+                # We use * prefix/suffix for fuzzy matching within the word
+                if [[ -z "$cur" || "$id" == *"$cur"* || "${(L)desc}" == *"${(L)cur}"* ]]; then
+                    val_list+=("$id")
+                    if [[ -n "$desc" ]]; then
+                        display_list+=("${(r:10:)id} -- $desc")
+                    else
+                        display_list+=("$id")
+                    fi
+                fi
+            done
+            
+            # -U: Don't perform standard prefix matching (we handled filtering manually)
+            # -d: Specify display strings (ID -- Description)
+            # -a: Specify actual values to insert (the ID)
+            compadd -U -d display_list -a val_list
             return
             ;;
         --tool-a|--tool-b)
-            # Find the associated job ID on the command line
             local job_val=""
             local i
             for ((i=CURRENT-1; i>0; i--)); do
@@ -54,7 +65,6 @@ for j in sorted(os.listdir(res_dir)):
             ;;
     esac
 
-    # 3. Default: Complete the flags themselves
     local -a opts
     opts=(
         '--job-id:ID of the job to analyze'
