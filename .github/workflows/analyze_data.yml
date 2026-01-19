@@ -28,15 +28,25 @@ jobs:
       - name: Find changed Job IDs
         id: jobs
         run: |
-          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
-            # New branch, compare against parent
-            DIFF_REF="HEAD^"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            CHANGED_JOBS="${{ github.event.inputs.job_ids }}"
           else
-            DIFF_REF="${{ github.event.before }}"
+            # For push events, determine what to compare against
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              DIFF_REF="HEAD^"
+            else
+              DIFF_REF="$BEFORE"
+            fi
+            
+            # Find directories under data/results/ that have modified files
+            # We use || true to prevent grep from failing the script if no matches are found
+            CHANGED_JOBS=$(git diff --name-only $DIFF_REF HEAD | grep 'data/results/' | cut -d'/' -f3 | sort -u | tr '\n' ' ' || echo "")
           fi
           
-          # Find directories under data/results/ that have modified files
-          CHANGED_JOBS=$(git diff --name-only $DIFF_REF HEAD | grep 'data/results/' | cut -d'/' -f3 | sort -u | tr '\n' ' ')
+          # Clean up whitespace
+          CHANGED_JOBS=$(echo $CHANGED_JOBS | xargs)
+          
           echo "jobs=$CHANGED_JOBS" >> $GITHUB_OUTPUT
           echo "Identified jobs: $CHANGED_JOBS"
 
