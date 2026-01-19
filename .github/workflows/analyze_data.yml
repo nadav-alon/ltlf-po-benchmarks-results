@@ -5,6 +5,11 @@ on:
     paths:
       - 'data/results/**'
       - 'data/logs/**'
+  workflow_dispatch:
+    inputs:
+      job_ids:
+        description: 'Space-separated list of job IDs to analyze'
+        required: true
 
 jobs:
   analyze:
