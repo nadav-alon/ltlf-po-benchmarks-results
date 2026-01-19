@@ -60,7 +60,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: analysis-report
-          path: report.md
+          path: |
+            report.md
+            reports/figures/
 
       - name: Comment on PR (Optional)
         if: github.event_name == 'pull_request' && steps.jobs.outputs.jobs != ''

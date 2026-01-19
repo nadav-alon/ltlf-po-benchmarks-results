@@ -90,7 +90,7 @@ def generate_report_for_job(job_id, scripts_dir, config=None):
     report.append("```")
 
     # 5. Cross-check against Source of Truth
-    actual_truth_job = truth_job_id if truth_job_id else job_id
+    actual_truth_job = str(truth_job_id) if truth_job_id else job_id
     results_base = Path(__file__).parent.parent / "data" / "results"
     truth_path = results_base / actual_truth_job / truth_tool
     
@@ -101,14 +101,15 @@ def generate_report_for_job(job_id, scripts_dir, config=None):
         current_job_results = results_base / job_id
         if current_job_results.exists():
             tools = [d.name for d in current_job_results.iterdir() if d.is_dir()]
-            # If we are checking against ourselves, don't compare truth_tool to truth_tool
-            if actual_truth_job == job_id:
-                tools = [t for t in tools if t != truth_tool]
-                
+            
             cross_check_script = scripts_dir / "cross_check.py"
             
             found_cross_issues = False
-            for tool in tools:
+            for tool in sorted(tools):
+                # Don't compare a tool with itself if it's the exact same job and tool
+                if actual_truth_job == job_id and tool == truth_tool:
+                    continue
+                    
                 res = run_command([
                     sys.executable, str(cross_check_script),
                     "--job-a", actual_truth_job, "--tool-a", truth_tool,
@@ -124,7 +125,21 @@ def generate_report_for_job(job_id, scripts_dir, config=None):
             if not found_cross_issues:
                 report.append(f"✅ All tools match reference {truth_tool} results.")
     else:
-        report.append(f"⚠️ Source of truth {truth_tool} for job {actual_truth_job} not found.")
+        report.append(f"## Cross-check Result")
+        report.append(f"⚠️ Source of truth `{truth_tool}` for job `{actual_truth_job}` not found in results directory.")
+
+    # 6. Visualizations
+    visualize_script = scripts_dir / "visualize.py"
+    run_command([sys.executable, str(visualize_script), "--job-id", job_id])
+    
+    figures_dir = Path(__file__).parent.parent / "reports" / "figures" / job_id
+    if figures_dir.exists():
+        report.append("## Visualizations")
+        for img in sorted(figures_dir.glob("*.png")):
+            # Use relative path for markdown if possible, but artifact upload will handle files
+            # For GitHub comments, we usually need hosted images, but for artifacts we can just list them
+            report.append(f"### {img.stem}")
+            report.append(f"![{img.name}](reports/figures/{job_id}/{img.name})")
 
     return "\n".join(report)
 
