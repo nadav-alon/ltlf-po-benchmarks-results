@@ -58,10 +58,13 @@ def generate_report_for_job(job_id, scripts_dir, config=None):
     
     if os.path.exists(inconsistent_file):
         report.append("### 🚨 Semantic Inconsistencies")
+        report.append("<details>")
+        report.append("<summary>Click to view details of inconsistencies</summary>\n")
         with open(inconsistent_file, 'r') as f:
             report.append("```")
             report.append(f.read())
             report.append("```")
+        report.append("</details>")
         os.remove(inconsistent_file)
 
     # 2. Run sanity_check.py
@@ -85,9 +88,12 @@ def generate_report_for_job(job_id, scripts_dir, config=None):
     errors_script = scripts_dir / "report_errors.py"
     res = run_command([sys.executable, str(errors_script), "--job-id", job_id, "--list"])
     report.append("## Error and Timeout Details")
+    report.append("<details>")
+    report.append("<summary>Click to view full list of errors and timeouts</summary>\n")
     report.append("```")
     report.append(res.stdout)
     report.append("```")
+    report.append("</details>")
 
     # 5. Cross-check against Source of Truth
     actual_truth_job = str(truth_job_id) if truth_job_id else job_id
@@ -118,9 +124,12 @@ def generate_report_for_job(job_id, scripts_dir, config=None):
                 if "CONFLICTS!" in res.stdout:
                     found_cross_issues = True
                     report.append(f"### Conflict with {tool}")
+                    report.append("<details>")
+                    report.append(f"<summary>Click to view conflicts with {tool}</summary>\n")
                     report.append("```")
                     report.append(res.stdout)
                     report.append("```")
+                    report.append("</details>")
             
             if not found_cross_issues:
                 report.append(f"✅ All tools match reference {truth_tool} results.")
