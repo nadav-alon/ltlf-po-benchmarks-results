@@ -18,7 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,17 +31,29 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             CHANGED_JOBS="${{ github.event.inputs.job_ids }}"
           else
-            # For push events, determine what to compare against
             BEFORE="${{ github.event.before }}"
-            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
-              DIFF_REF="HEAD^"
-            else
+            echo "Event: push, Before: $BEFORE, HEAD: $(git rev-parse HEAD)"
+            
+            # Use git cat-file -e to check if the object actually exists in the local DB
+            if [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
+              echo "Before commit $BEFORE is available. Comparing range."
               DIFF_REF="$BEFORE"
+            else
+              echo "Before commit $BEFORE is missing or invalid (force push?). Using parent fallback."
+              PARENT=$(git log -1 --pretty=%P | awk '{print $1}')
+              if [ -n "$PARENT" ]; then
+                DIFF_REF="$PARENT"
+              else
+                DIFF_REF="HEAD"
+              fi
             fi
             
-            # Find directories under data/results/ that have modified files
-            # We use || true to prevent grep from failing the script if no matches are found
-            CHANGED_JOBS=$(git diff --name-only $DIFF_REF HEAD | grep 'data/results/' | cut -d'/' -f3 | sort -u | tr '\n' ' ' || echo "")
+            echo "Final DIFF_REF: $DIFF_REF"
+            if [ "$DIFF_REF" = "HEAD" ]; then
+              CHANGED_JOBS=$(git show --name-only --format="" HEAD | grep 'data/results/' | cut -d'/' -f3 | sort -u | tr '\n' ' ' || echo "")
+            else
+              CHANGED_JOBS=$(git diff --name-only $DIFF_REF HEAD | grep 'data/results/' | cut -d'/' -f3 | sort -u | tr '\n' ' ' || echo "")
+            fi
           fi
           
           # Clean up whitespace
