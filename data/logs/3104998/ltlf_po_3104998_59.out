@@ -1,0 +1,100 @@
+=========================================
+SLURM Job ID: 3105058
+SLURM Array Job ID: 3104998
+Array Task ID: 59
+Running on node: cn24.hpc.pub.lan
+Testing: christian:direct
+Semantics: moore
+Shard: 11 of 16
+Output file: results/3104998/christian_direct/shard_11.csv
+=========================================
+
+Shard 11/16: Running 101 out of 1617 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_2_22.ltlf: Command '"/RG/rg-fried/alnadav5/ltlf-synth-unrel-input-aaai2025/Syft/build/bin/Syft" /tmp/tmpzeb_mh9o/peek_1_2_22.ltlf.christian.ltlf /tmp/tmpzeb_mh9o/peek_1_2_22.part.christian.part 0 direct' died with <Signals.SIGABRT: 6>., b'./ltlf2fol NNF /tmp/tmpzeb_mh9o/peek_1_2_22.ltlf.christian.ltlf.main > /tmp/tmpzeb_mh9o/peek_1_2_22.ltlf.christian.ltlf.main.fol\n./ltlf2pfol /tmp/tmpzeb_mh9o/peek_1_2_22.ltlf.christian.ltlf.backup >/tmp/tmpzeb_mh9o/peek_1_2_22.ltlf.christian.ltlf.backup.fol\nmona -u -xw /tmp/tmpzeb_mh9o/peek_1_2_22.ltlf.christian.ltlf.backup.fol > /tmp/tmpzeb_mh9o/peek_1_2_22.ltlf.christian.ltlf.backup.mona\nThe number of explicit states: 2\nThe number of state variables: 1\nSyn initialised.\nfree(): invalid pointer\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_2_51.ltlf: Command '"/RG/rg-fried/alnadav5/ltlf-synth-unrel-input-aaai2025/Syft/build/bin/Syft" /tmp/tmpiyl44_wz/peek_1_2_51.ltlf.christian.ltlf /tmp/tmpiyl44_wz/peek_1_2_51.part.christian.part 0 direct' died with <Signals.SIGABRT: 6>., b'./ltlf2fol NNF /tmp/tmpiyl44_wz/peek_1_2_51.ltlf.christian.ltlf.main > /tmp/tmpiyl44_wz/peek_1_2_51.ltlf.christian.ltlf.main.fol\n./ltlf2pfol /tmp/tmpiyl44_wz/peek_1_2_51.ltlf.christian.ltlf.backup >/tmp/tmpiyl44_wz/peek_1_2_51.ltlf.christian.ltlf.backup.fol\nmona -u -xw /tmp/tmpiyl44_wz/peek_1_2_51.ltlf.christian.ltlf.backup.fol > /tmp/tmpiyl44_wz/peek_1_2_51.ltlf.christian.ltlf.backup.mona\nThe number of explicit states: 2\nThe number of state variables: 1\nSyn initialised.\nfree(): invalid pointer\n'
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_26.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_40.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_55.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_7.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_84.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_99.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_22.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_37.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_51.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_66.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_80.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_95.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_19.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_33.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_48.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_62.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_77.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_91.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_15.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_3.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_44.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_59.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_73.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_88.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_11.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_26.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_40.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_55.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_7.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_84.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_99.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_22.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_37.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_51.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_66.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_80.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_95.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_19.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_33.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_48.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_62.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_77.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_91.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_15.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_3.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_44.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_59.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_73.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_88.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_11.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_26.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_40.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_7.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_84.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_99.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_22.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_37.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_51.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_66.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_80.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_95.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_19.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_33.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_48.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_62.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_77.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_91.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_15.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_3.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_44.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_59.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_73.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_88.ltlf
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 73
+Other: 25
+Error: 2
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

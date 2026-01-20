@@ -1,0 +1,62 @@
+=========================================
+SLURM Job ID: 3105119
+SLURM Array Job ID: 3104998
+Array Task ID: 119
+Running on node: cn23.hpc.pub.lan
+Testing: spot:ltl
+Semantics: moore
+Shard: 7 of 16
+Output file: results/3104998/spot_ltl/shard_7.csv
+=========================================
+
+Shard 7/16: Running 101 out of 1617 tests.
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_9.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_62.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_15.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_3.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_59.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_73.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_11.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_26.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_40.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_55.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_7.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_84.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_22.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_37.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_51.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_66.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_80.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_95.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_19.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_33.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_48.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_62.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_77.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_91.ltlf
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_15.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmplrs_5scf/peek_4_3_15.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmplrs_5scf/peek_4_3_15.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059578 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmplrs_5scf/peek_4_3_15.ltlf\n     1059579                       | paste -sd'&'\n     1059580 Killed                  | ltlsynt --part-file=/tmp/tmplrs_5scf/peek_4_3_15.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_3.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp6tj49hwy/peek_4_3_3.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmp6tj49hwy/peek_4_3_3.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059589 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp6tj49hwy/peek_4_3_3.ltlf\n     1059590                       | paste -sd'&'\n     1059591 Killed                  | ltlsynt --part-file=/tmp/tmp6tj49hwy/peek_4_3_3.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_44.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp7729jlk3/peek_4_3_44.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmp7729jlk3/peek_4_3_44.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059607 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp7729jlk3/peek_4_3_44.ltlf\n     1059608                       | paste -sd'&'\n     1059609 Killed                  | ltlsynt --part-file=/tmp/tmp7729jlk3/peek_4_3_44.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_59.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpklzls6y_/peek_4_3_59.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmpklzls6y_/peek_4_3_59.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059619 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpklzls6y_/peek_4_3_59.ltlf\n     1059620                       | paste -sd'&'\n     1059621 Killed                  | ltlsynt --part-file=/tmp/tmpklzls6y_/peek_4_3_59.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_73.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpbra347cn/peek_4_3_73.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmpbra347cn/peek_4_3_73.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059679 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpbra347cn/peek_4_3_73.ltlf\n     1059680                       | paste -sd'&'\n     1059681 Killed                  | ltlsynt --part-file=/tmp/tmpbra347cn/peek_4_3_73.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_88.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpa7d4lckt/peek_4_3_88.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmpa7d4lckt/peek_4_3_88.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059694 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpa7d4lckt/peek_4_3_88.ltlf\n     1059695                       | paste -sd'&'\n     1059696 Killed                  | ltlsynt --part-file=/tmp/tmpa7d4lckt/peek_4_3_88.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_11.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpvsww03u1/peek_4_4_11.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmpvsww03u1/peek_4_4_11.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059781 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpvsww03u1/peek_4_4_11.ltlf\n     1059782                       | paste -sd'&'\n     1059783 Killed                  | ltlsynt --part-file=/tmp/tmpvsww03u1/peek_4_4_11.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_26.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp9m66p2ni/peek_4_4_26.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmp9m66p2ni/peek_4_4_26.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059808 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp9m66p2ni/peek_4_4_26.ltlf\n     1059809                       | paste -sd'&'\n     1059810 Killed                  | ltlsynt --part-file=/tmp/tmp9m66p2ni/peek_4_4_26.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_40.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp_ff56mm2/peek_4_4_40.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmp_ff56mm2/peek_4_4_40.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059819 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp_ff56mm2/peek_4_4_40.ltlf\n     1059820                       | paste -sd'&'\n     1059821 Killed                  | ltlsynt --part-file=/tmp/tmp_ff56mm2/peek_4_4_40.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_55.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp69vhxumq/peek_4_4_55.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmp69vhxumq/peek_4_4_55.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059843 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp69vhxumq/peek_4_4_55.ltlf\n     1059844                       | paste -sd'&'\n     1059845 Killed                  | ltlsynt --part-file=/tmp/tmp69vhxumq/peek_4_4_55.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_7.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpl32sha70/peek_4_4_7.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmpl32sha70/peek_4_4_7.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059855 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpl32sha70/peek_4_4_7.ltlf\n     1059856                       | paste -sd'&'\n     1059857 Killed                  | ltlsynt --part-file=/tmp/tmpl32sha70/peek_4_4_7.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_84.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp50c3gx62/peek_4_4_84.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmp50c3gx62/peek_4_4_84.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059859 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp50c3gx62/peek_4_4_84.ltlf\n     1059860                       | paste -sd'&'\n     1059861 Killed                  | ltlsynt --part-file=/tmp/tmp50c3gx62/peek_4_4_84.part.spot.part --real --verbose --algo=ds\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_99.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp023dtmz5/peek_4_4_99.ltlf | paste -sd'&' | ltlsynt --part-file=/tmp/tmp023dtmz5/peek_4_4_99.part.spot.part --real --verbose --algo=ds' returned non-zero exit status 137., b"there are 1 subformulas\n/bin/sh: line 1: 1059868 Done                    sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp023dtmz5/peek_4_4_99.ltlf\n     1059869                       | paste -sd'&'\n     1059870 Killed                  | ltlsynt --part-file=/tmp/tmp023dtmz5/peek_4_4_99.part.spot.part --real --verbose --algo=ds\n"
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 1
+Timeout: 23
+Other: 64
+Error: 13
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

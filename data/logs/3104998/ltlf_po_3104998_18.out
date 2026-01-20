@@ -1,0 +1,200 @@
+=========================================
+SLURM Job ID: 3105017
+SLURM Array Job ID: 3104998
+Array Task ID: 18
+Running on node: cn29.hpc.pub.lab
+Testing: lucas:projection-based
+Semantics: moore
+Shard: 2 of 16
+Output file: results/3104998/lucas_projection-based/shard_2.csv
+=========================================
+
+Shard 2/16: Running 101 out of 1617 tests.
+Missing part file for /tmp/tmp8_g3mhnj/peek_1_1_18.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpt4m_ouc0/peek_1_1_32.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmplb9fl6ys/peek_1_1_47.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpkj0gicel/peek_1_1_61.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp5e_o1xun/peek_1_1_76.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpj9stvpar/peek_1_1_90.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpk8gkno24/peek_1_2_14.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpndfrm8lo/peek_1_2_29.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpupnhwxob/peek_1_2_43.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpvkm8uq_h/peek_1_2_58.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpnn4g4jp7/peek_1_2_72.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpfvueu3dx/peek_1_2_87.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp4v1flgem/peek_1_3_100.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmp19oi8q7n/peek_1_3_25.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpkmriimob/peek_1_3_4.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpmqy_japr/peek_1_3_54.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpts1846k8/peek_1_3_69.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpzuwxxp2q/peek_1_3_83.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpx3cpc7j0/peek_1_3_98.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpl0h_2c5c/peek_1_4_21.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpze1f4qzm/peek_1_4_36.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmphbq2pdfi/peek_1_4_50.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpbhh6xp2x/peek_1_4_65.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpy07s_lzp/peek_1_4_8.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpvdqqv1kp/peek_1_4_94.ltlf, missing suffix .rev.neg
+Missing part file for /tmp/tmpc9xsv3dm/peek_2_1_18.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_18.ltlf
+Missing part file for /tmp/tmpf31xkxza/peek_2_1_32.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_32.ltlf
+Missing part file for /tmp/tmpx72so3dg/peek_2_1_47.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_47.ltlf
+Missing part file for /tmp/tmp3e4ef2ir/peek_2_1_61.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_61.ltlf
+Missing part file for /tmp/tmpzif1pxwt/peek_2_1_76.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_76.ltlf
+Missing part file for /tmp/tmp2mnf1je2/peek_2_1_90.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_90.ltlf
+Missing part file for /tmp/tmp__o48jw8/peek_2_2_14.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_14.ltlf
+Missing part file for /tmp/tmpb38gie_7/peek_2_2_29.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_29.ltlf
+Missing part file for /tmp/tmp1regkvp7/peek_2_2_43.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_43.ltlf
+Missing part file for /tmp/tmpd6m2pdd2/peek_2_2_58.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_58.ltlf
+Missing part file for /tmp/tmprs2e9f5k/peek_2_2_72.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_72.ltlf
+Missing part file for /tmp/tmpp2mq4a3z/peek_2_2_87.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_87.ltlf
+Missing part file for /tmp/tmpyc6pdov6/peek_2_3_100.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_100.ltlf
+Missing part file for /tmp/tmplg6cumse/peek_2_3_25.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_25.ltlf
+Missing part file for /tmp/tmp0utl0ocf/peek_2_3_4.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_4.ltlf
+Missing part file for /tmp/tmp9bm7ywo9/peek_2_3_54.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_54.ltlf
+Missing part file for /tmp/tmp7yzw6wiz/peek_2_3_69.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_69.ltlf
+Missing part file for /tmp/tmpf8khflq_/peek_2_3_83.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_83.ltlf
+Missing part file for /tmp/tmp1vdy724l/peek_2_3_98.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_98.ltlf
+Missing part file for /tmp/tmp4u88m6mn/peek_2_4_21.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_21.ltlf
+Missing part file for /tmp/tmpn_0zrbu6/peek_2_4_36.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_36.ltlf
+Missing part file for /tmp/tmprf2lierw/peek_2_4_50.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_50.ltlf
+Missing part file for /tmp/tmp4mndd2ih/peek_2_4_65.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_65.ltlf
+Missing part file for /tmp/tmphpsomv26/peek_2_4_8.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_8.ltlf
+Missing part file for /tmp/tmp446uoypu/peek_2_4_94.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_94.ltlf
+Missing part file for /tmp/tmp2yvdorax/peek_3_1_18.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_18.ltlf
+Missing part file for /tmp/tmpsjxupd6p/peek_3_1_32.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_32.ltlf
+Missing part file for /tmp/tmpy6achz88/peek_3_1_47.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_47.ltlf
+Missing part file for /tmp/tmp467uzkfi/peek_3_1_61.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_61.ltlf
+Missing part file for /tmp/tmpt72jrt5f/peek_3_1_76.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_76.ltlf
+Missing part file for /tmp/tmpcvuatvkf/peek_3_1_90.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_90.ltlf
+Missing part file for /tmp/tmppwuos_pp/peek_3_2_14.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_14.ltlf
+Missing part file for /tmp/tmpo736vkbl/peek_3_2_29.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_29.ltlf
+Missing part file for /tmp/tmptb4tbf1f/peek_3_2_43.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_43.ltlf
+Missing part file for /tmp/tmpak5l_tiz/peek_3_2_58.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_58.ltlf
+Missing part file for /tmp/tmpihqdozdc/peek_3_2_72.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_72.ltlf
+Missing part file for /tmp/tmp9if7woyw/peek_3_2_87.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_87.ltlf
+Missing part file for /tmp/tmpfam95gac/peek_3_3_100.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_100.ltlf
+Missing part file for /tmp/tmposrqntoi/peek_3_3_25.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_25.ltlf
+Missing part file for /tmp/tmpse4ntqys/peek_3_3_4.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_4.ltlf
+Missing part file for /tmp/tmpyltje6cb/peek_3_3_54.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_54.ltlf
+Missing part file for /tmp/tmpjln5l02w/peek_3_3_69.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_69.ltlf
+Missing part file for /tmp/tmpm3bhijin/peek_3_3_83.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_83.ltlf
+Missing part file for /tmp/tmp19_tcgqx/peek_3_3_98.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_98.ltlf
+Missing part file for /tmp/tmp24jcz8hv/peek_3_4_21.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_21.ltlf
+Missing part file for /tmp/tmps8zniuqc/peek_3_4_36.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_36.ltlf
+Missing part file for /tmp/tmptlim60jj/peek_3_4_50.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_50.ltlf
+Missing part file for /tmp/tmpagumhzuf/peek_3_4_65.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_65.ltlf
+Missing part file for /tmp/tmp7jdudc34/peek_3_4_8.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_8.ltlf
+Missing part file for /tmp/tmp7ij6i1hd/peek_3_4_94.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_94.ltlf
+Missing part file for /tmp/tmpehod23rr/peek_4_1_18.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_18.ltlf
+Missing part file for /tmp/tmpdkqwlumx/peek_4_1_32.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_32.ltlf
+Missing part file for /tmp/tmp7hew8ekq/peek_4_1_47.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_47.ltlf
+Missing part file for /tmp/tmpgy9h6345/peek_4_1_61.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_61.ltlf
+Missing part file for /tmp/tmpexqxjn8j/peek_4_1_76.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_76.ltlf
+Missing part file for /tmp/tmpgpyylh55/peek_4_1_90.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_90.ltlf
+Missing part file for /tmp/tmpirlyichj/peek_4_2_14.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_14.ltlf
+Missing part file for /tmp/tmp0ic3x2hb/peek_4_2_29.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_29.ltlf
+Missing part file for /tmp/tmpunfwrr8j/peek_4_2_43.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_43.ltlf
+Missing part file for /tmp/tmpfge07061/peek_4_2_58.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_58.ltlf
+Missing part file for /tmp/tmp8dtdujun/peek_4_2_72.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_72.ltlf
+Missing part file for /tmp/tmpatzu6xuu/peek_4_2_87.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_87.ltlf
+Missing part file for /tmp/tmp2pqbazxb/peek_4_3_100.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_100.ltlf
+Missing part file for /tmp/tmpop9nihiq/peek_4_3_25.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_25.ltlf
+Missing part file for /tmp/tmpv7w0s6e2/peek_4_3_4.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_4.ltlf
+Missing part file for /tmp/tmpj28w2ovf/peek_4_3_54.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_54.ltlf
+Missing part file for /tmp/tmpz_d9xrur/peek_4_3_69.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_69.ltlf
+Missing part file for /tmp/tmp2wg1q3rh/peek_4_3_83.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_83.ltlf
+Missing part file for /tmp/tmpscun_5vg/peek_4_3_98.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_98.ltlf
+Missing part file for /tmp/tmpva2zunn7/peek_4_4_21.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_21.ltlf
+Missing part file for /tmp/tmptplqnw62/peek_4_4_36.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_36.ltlf
+Missing part file for /tmp/tmpu6_uwfik/peek_4_4_50.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_50.ltlf
+Missing part file for /tmp/tmpgjpmk2wb/peek_4_4_65.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_65.ltlf
+Missing part file for /tmp/tmpyncmg5e3/peek_4_4_8.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_8.ltlf
+Missing part file for /tmp/tmp5jetjbw7/peek_4_4_94.ltlf, missing suffix .rev.neg
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_94.ltlf
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 75
+Other: 25
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

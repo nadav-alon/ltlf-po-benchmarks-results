@@ -1,0 +1,27 @@
+=========================================
+SLURM Job ID: 3105079
+SLURM Array Job ID: 3104998
+Array Task ID: 80
+Running on node: cn26.hpc.pub.lan
+Testing: christian:mso
+Semantics: moore
+Shard: 0 of 16
+Output file: results/3104998/christian_mso/shard_0.csv
+=========================================
+
+Shard 0/16: Running 102 out of 1617 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_10.ltlf: Command '"/RG/rg-fried/alnadav5/ltlf-synth-unrel-input-aaai2025/Syft/build/bin/Syft" /tmp/tmps5t8neub/coins_10.ltlf.christian.ltlf /tmp/tmps5t8neub/coins_10.part.christian.part 0 mso' returned non-zero exit status 1., b'sh: line 1: 664509 Killed                  mona -u -xw /tmp/tmps5t8neub/coins_10.ltlf.christian.ltlf.fol > /tmp/tmps5t8neub/coins_10.ltlf.christian.ltlf.dfa\nError running mona for MSO\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/seek_9.ltlf: Command '"/RG/rg-fried/alnadav5/ltlf-synth-unrel-input-aaai2025/Syft/build/bin/Syft" /tmp/tmpcevic5yu/seek_9.ltlf.christian.ltlf /tmp/tmpcevic5yu/seek_9.part.christian.part 0 mso' returned non-zero exit status 1., b'sh: line 1: 674440 Killed                  mona -u -xw /tmp/tmpcevic5yu/seek_9.ltlf.christian.ltlf.fol > /tmp/tmpcevic5yu/seek_9.ltlf.christian.ltlf.dfa\nError running mona for MSO\n'
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 2
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

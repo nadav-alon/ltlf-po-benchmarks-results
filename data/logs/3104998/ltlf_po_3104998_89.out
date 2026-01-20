@@ -1,0 +1,25 @@
+=========================================
+SLURM Job ID: 3105089
+SLURM Array Job ID: 3104998
+Array Task ID: 89
+Running on node: cn23.hpc.pub.lan
+Testing: christian:mso
+Semantics: moore
+Shard: 9 of 16
+Output file: results/3104998/christian_mso/shard_9.csv
+=========================================
+
+Shard 9/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

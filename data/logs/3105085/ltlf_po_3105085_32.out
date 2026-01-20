@@ -1,0 +1,27 @@
+=========================================
+SLURM Job ID: 3105795
+SLURM Array Job ID: 3105085
+Array Task ID: 32
+Running on node: cn28.hpc.pub.lab
+Testing: lucas:mso
+Semantics: mealy
+Shard: 0 of 16
+Output file: results/3105085/lucas_mso/shard_0.csv
+=========================================
+
+Shard 0/16: Running 102 out of 1617 tests.
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_10.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/seek_9.ltlf
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 2
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

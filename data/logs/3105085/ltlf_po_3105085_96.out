@@ -1,0 +1,25 @@
+=========================================
+SLURM Job ID: 3106510
+SLURM Array Job ID: 3105085
+Array Task ID: 96
+Running on node: cn30.hpc.pub.lan
+Testing: spot:ltlf
+Semantics: mealy
+Shard: 0 of 16
+Output file: results/3105085/spot_ltlf/shard_0.csv
+=========================================
+
+Shard 0/16: Running 102 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 2
+Failed: 0
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

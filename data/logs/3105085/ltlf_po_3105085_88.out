@@ -1,0 +1,26 @@
+=========================================
+SLURM Job ID: 3106502
+SLURM Array Job ID: 3105085
+Array Task ID: 88
+Running on node: cn30.hpc.pub.lan
+Testing: christian:mso
+Semantics: mealy
+Shard: 8 of 16
+Output file: results/3105085/christian_mso/shard_8.csv
+=========================================
+
+Shard 8/16: Running 101 out of 1617 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/seek_10.ltlf: Command '"/RG/rg-fried/alnadav5/ltlf-synth-unrel-input-aaai2025/Syft/build/bin/Syft" /tmp/tmp9d2agkca/seek_10.ltlf.christian.ltlf /tmp/tmp9d2agkca/seek_10.part.christian.part 1 mso' returned non-zero exit status 1., b'sh: line 1: 1136628 Killed                  mona -u -xw /tmp/tmp9d2agkca/seek_10.ltlf.christian.ltlf.fol > /tmp/tmp9d2agkca/seek_10.ltlf.christian.ltlf.dfa\nError running mona for MSO\n'
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 1
+Timeout: 0
+Other: 100
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================
