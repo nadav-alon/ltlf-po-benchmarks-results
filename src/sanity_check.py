@@ -32,11 +32,13 @@ def load_results(job_id, tool):
     for shard_file in shard_files:
         try:
             with open(shard_file, 'r') as f:
-                reader = csv.DictReader(f)
+                # Skip comment lines
+                non_comments = (line for line in f if not line.strip().startswith('#'))
+                reader = csv.DictReader(non_comments)
                 for row in reader:
                     all_results.append({
                         'test': row['test'],
-                        'status': int(row['status']),
+                        'status': int(float(row['status'])),
                         'time': float(row['time'])
                     })
         except Exception as e:

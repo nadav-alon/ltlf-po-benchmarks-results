@@ -4,7 +4,8 @@ import os
 import argparse
 from collections import defaultdict
 
-BASE_DIR = "/home/cowclaw/results_shards"
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(SCRIPTS_DIR)
 RESULTS_DIR = os.path.join(BASE_DIR, "data/results")
 
 def load_tool_results(job_id, tool_name):
@@ -15,7 +16,9 @@ def load_tool_results(job_id, tool_name):
     
     for f in files:
         with open(f, 'r') as fd:
-            reader = csv.DictReader(fd)
+            # Skip comment lines
+            non_comments = (line for line in fd if not line.strip().startswith('#'))
+            reader = csv.DictReader(non_comments)
             for row in reader:
                 try:
                     results[row['test']] = int(float(row['status']))

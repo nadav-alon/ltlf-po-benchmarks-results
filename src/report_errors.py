@@ -19,7 +19,9 @@ def report_errors(results_dir, job_id=None, output_csv=None, detail=False):
         dir_name = os.path.basename(os.path.dirname(filepath))
         
         with open(filepath, 'r') as f:
-            reader = csv.DictReader(f)
+            # Skip comment lines
+            non_comments = (line for line in f if not line.strip().startswith('#'))
+            reader = csv.DictReader(non_comments)
             for row in reader:
                 try:
                     status = int(float(row['status']))
@@ -71,8 +73,10 @@ def report_errors(results_dir, job_id=None, output_csv=None, detail=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Consolidated Error Reporting Tool")
+    scripts_dir = os.path.dirname(os.path.abspath(__file__))
+    default_results_dir = os.path.join(os.path.dirname(scripts_dir), "data", "results")
     parser.add_argument("--job-id", help="Filter by Job ID")
-    parser.add_argument("--results-dir", default="/home/cowclaw/results_shards/data/results")
+    parser.add_argument("--results-dir", default=default_results_dir)
     parser.add_argument("--csv", help="Export failures to this CSV file")
     parser.add_argument("--list", action="store_true", help="Print full list of erroring test names")
     args = parser.parse_args()

@@ -7,14 +7,16 @@ import re
 import argparse
 
 # Config
-BASE_DIR = "/home/cowclaw/results_shards"
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(SCRIPTS_DIR)
 RESULTS_DIR = os.path.join(BASE_DIR, "data/results")
 OUTPUT_DIR = os.path.join(BASE_DIR, "reports/figures")
 TIMEOUT_PENALTY_MS = 300000
 
 def get_job_label(job_id):
     import json
-    label_file = "/home/cowclaw/results_shards/data/job_labels.json"
+    scripts_dir = os.path.dirname(os.path.abspath(__file__))
+    label_file = os.path.join(os.path.dirname(scripts_dir), "data", "job_labels.json")
     if not job_id: return "Combined Data"
     if os.path.exists(label_file):
         try:
@@ -52,7 +54,7 @@ def load_data(job_id=None):
     for filepath in glob.glob(path_pattern, recursive=True):
         impl, mode = parse_tool(filepath)
         try:
-            df = pd.read_csv(filepath)
+            df = pd.read_csv(filepath, comment='#')
             for _, row in df.iterrows():
                 benchmark, val = parse_test_name(row['test'])
                 if benchmark:

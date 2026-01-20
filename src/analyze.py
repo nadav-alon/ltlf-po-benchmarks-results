@@ -28,7 +28,8 @@ def get_label(impl, mode):
 
 def get_job_label(job_id):
     import json
-    label_file = "/home/cowclaw/results_shards/data/job_labels.json"
+    scripts_dir = os.path.dirname(os.path.abspath(__file__))
+    label_file = os.path.join(os.path.dirname(scripts_dir), "data", "job_labels.json")
     if os.path.exists(label_file):
         try:
             with open(label_file, 'r') as f:
@@ -58,7 +59,9 @@ def load_shards(results_dir, job_id=None):
         
         try:
             with open(filepath, 'r') as f:
-                reader = csv.DictReader(f)
+                # Skip comment lines
+                non_comments = (line for line in f if not line.strip().startswith('#'))
+                reader = csv.DictReader(non_comments)
                 for row in reader:
                     try:
                         grouped_results[tool_key].append({
@@ -133,8 +136,10 @@ def run_analysis(grouped_results, job_id=None, output_inconsistent=None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Consolidated Analysis Tool")
+    scripts_dir = os.path.dirname(os.path.abspath(__file__))
+    default_results_dir = os.path.join(os.path.dirname(scripts_dir), "data", "results")
     parser.add_argument("--job-id", help="Job ID to analyze")
-    parser.add_argument("--results-dir", default="/home/cowclaw/results_shards/data/results")
+    parser.add_argument("--results-dir", default=default_results_dir)
     parser.add_argument("--output-inconsistent", help="Save conflict details to file")
     args = parser.parse_args()
 
