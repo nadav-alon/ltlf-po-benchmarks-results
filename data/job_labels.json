@@ -8,5 +8,7 @@
     "3104605": "spot ltlf mealy results",
     "3104998": "complete moore",
     "3105085": "complete mealy",
+    "3109223": "spot:ltlfilt moore (effectively mealy)",
+    "3109241": "spot:ltlfilt mealy",
     "9999999": "local test debug run"
 }
