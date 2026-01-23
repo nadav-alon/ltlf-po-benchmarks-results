@@ -10,5 +10,6 @@
     "3105085": "complete mealy",
     "3109223": "spot:ltlfilt moore (effectively mealy)",
     "3109241": "spot:ltlfilt mealy",
+    "3114444": "spot:ltlf-fo moore first try",
     "9999999": "local test debug run"
 }

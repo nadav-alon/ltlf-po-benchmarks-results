@@ -1,0 +1,26 @@
+=========================================
+SLURM Job ID: 3114449
+SLURM Array Job ID: 3114444
+Array Task ID: 148
+Running on node: cn28.hpc.pub.lab
+Testing: spot:ltlf-fo
+Semantics: moore
+Shard: 4 of 16
+Output file: results/3114444/spot_ltlf-fo/shard_4.csv
+=========================================
+
+Shard 4/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 0
+Other: 100
+N/A: 0
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================
