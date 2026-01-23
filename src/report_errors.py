@@ -25,7 +25,7 @@ def report_errors(results_dir, job_id=None, output_csv=None, detail=False):
             for row in reader:
                 try:
                     status = int(float(row['status']))
-                    if status < 0:
+                    if status in [-1, -2]:
                         err_type = "Timeout" if status == -2 else "Error"
                         errors[dir_name][err_type].append({
                             'test': row['test'],
