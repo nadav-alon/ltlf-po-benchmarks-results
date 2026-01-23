@@ -61,6 +61,7 @@ def analyze_results(results, job_id, tool):
     unrealizable = status_counts.get(0, 0)
     timeout = status_counts.get(-2, 0)
     error = status_counts.get(-1, 0)
+    na_count = status_counts.get(-3, 0)
     
     print(f"\n{'='*60}")
     print(f"Job {job_id} - Tool: {tool}")
@@ -70,6 +71,7 @@ def analyze_results(results, job_id, tool):
     print(f"  Unrealizable (0): {unrealizable:4d} ({unrealizable/total*100:5.1f}%)")
     print(f"  Timeout (-2):     {timeout:4d} ({timeout/total*100:5.1f}%)")
     print(f"  Error (-1):       {error:4d} ({error/total*100:5.1f}%)")
+    print(f"  N/A (-3):         {na_count:4d} ({na_count/total*100:5.1f}%)")
     
     # Check for obvious mistakes
     issues = []
