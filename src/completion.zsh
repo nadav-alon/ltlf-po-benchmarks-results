@@ -7,30 +7,51 @@ _ltlf_benchmarks() {
     local -A labels
     local -a job_ids
     if [[ -d "$results_dir" ]]; then
-        job_ids=($(ls -1 "$results_dir"))
+        job_ids=($(ls -1 "$results_dir" | grep -E '^[0-9]+$'))
         if [[ -f "$label_file" ]]; then
             # Load labels into an associative array
-            local k v
             while IFS= read -r line; do
-                k="${line%%:*}"
-                v="${line#*:}"
-                labels[$k]="$v"
+                labels[${line%%:*}]="${line#*:}"
             done <<< "$(python3 -c "import json; d=json.load(open('$label_file')); [print(f'{k}:{v}') for k,v in d.items()]" 2>/dev/null)"
         fi
     fi
 
-    local prev="$words[CURRENT-1]"
     local cur="$words[CURRENT]"
+    local active_opt=""
+    local i
+    # Find the most recent persistent flag
+    for ((i=CURRENT-1; i>0; i--)); do
+        if [[ "$words[i]" == --* ]]; then
+            active_opt="$words[i]"
+            break
+        fi
+    done
 
-    case "$prev" in
+    local -a display_list val_list
+
+    case "$active_opt" in
         --job-id|--job-a|--job-b)
-            # Filter matches by checking both ID and Description
-            local -a display_list val_list
+            if [[ "$cur" == *-* ]]; then
+                # Handle JOB_ID-tool completion
+                local jid="${cur%%-*}"
+                local filter="${cur#*-}"
+                if [[ -d "$results_dir/$jid" ]]; then
+                    for t in $(ls -1 "$results_dir/$jid"); do
+                        local t_val="${t/_/:}"
+                        if [[ -z "$filter" || "$t_val" == *"$filter"* ]]; then
+                            val_list+=("$jid-$t_val")
+                            display_list+=("$jid-$t_val")
+                        fi
+                    done
+                    compadd -U -d display_list -a val_list
+                    return
+                fi
+            fi
+
+            # Regular Job ID completion
             local id desc
             for id in $job_ids; do
                 desc="${labels[$id]}"
-                # If current input matches either ID or Description (case-insensitive)
-                # We use * prefix/suffix for fuzzy matching within the word
                 if [[ -z "$cur" || "$id" == *"$cur"* || "${(L)desc}" == *"${(L)cur}"* ]]; then
                     val_list+=("$id")
                     if [[ -n "$desc" ]]; then
@@ -40,25 +61,29 @@ _ltlf_benchmarks() {
                     fi
                 fi
             done
-            
-            # -U: Don't perform standard prefix matching (we handled filtering manually)
-            # -d: Specify display strings (ID -- Description)
-            # -a: Specify actual values to insert (the ID)
             compadd -U -d display_list -a val_list
             return
             ;;
         --tool-a|--tool-b)
             local job_val=""
             local i
+            # Look for corresponding job-a or job-b
+            local target_job="--job-a"
+            [[ "$active_opt" == "--tool-b" ]] && target_job="--job-b"
+            
             for ((i=CURRENT-1; i>0; i--)); do
-                if [[ "$words[i]" == "--job-a" || "$words[i]" == "--job-b" || "$words[i]" == "--job-id" ]]; then
+                if [[ "$words[i]" == "$target_job" || "$words[i]" == "--job-id" ]]; then
                     job_val="$words[i+1]"
+                    job_val="${job_val%%-*}"
                     break
                 fi
             done
+            
             if [[ -n "$job_val" && -d "$results_dir/$job_val" ]]; then
                 local -a tools
-                tools=($(ls -1 "$results_dir/$job_val"))
+                for t in $(ls -1 "$results_dir/$job_val"); do
+                    tools+=("${t/_/:}")
+                done
                 _describe -t tools 'tools' tools
                 return
             fi
@@ -67,7 +92,8 @@ _ltlf_benchmarks() {
 
     local -a opts
     opts=(
-        '--job-id:ID of the job to analyze'
+        '--job-id:Job identifier(s) (supports JOB_ID-tool:mode)'
+        '--label:Custom label(s) for the jobs'
         '--job-a:First job ID for comparison'
         '--job-b:Second job ID for comparison'
         '--tool-a:Tool name for first job'
