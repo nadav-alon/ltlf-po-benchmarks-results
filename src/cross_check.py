@@ -42,6 +42,16 @@ def compare_tools(job_a, tool_a, job_b, tool_b, output_csv=None):
     for test in sorted(common):
         sa, sb = res_a[test], res_b[test]
         if sa in [0, 1] and sb in [0, 1] and sa != sb:
+            # Allow discrepancy if one tool is in full observability mode
+            # and it finds the problem realizable (1) while the other (PO) found it unrealizable (0).
+            is_fo_a = "ltlf-fo" in tool_a
+            is_fo_b = "ltlf-fo" in tool_b
+            
+            if is_fo_a and sa == 1 and sb == 0:
+                continue
+            if is_fo_b and sb == 1 and sa == 0:
+                continue
+                
             conflicts.append({'test': test, 'val_a': sa, 'val_b': sb})
 
     if not conflicts:

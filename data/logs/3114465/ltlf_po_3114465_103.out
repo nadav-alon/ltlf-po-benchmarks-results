@@ -1,0 +1,27 @@
+=========================================
+SLURM Job ID: 3114473
+SLURM Array Job ID: 3114465
+Array Task ID: 103
+Running on node: cn28.hpc.pub.lab
+Testing: spot:ltlf
+Semantics: moore
+Shard: 7 of 16
+Output file: results/3114465/spot_ltlf/shard_7.csv
+=========================================
+
+Shard 7/16: Running 101 out of 1617 tests.
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_9.ltlf
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 1
+Timeout: 0
+Other: 100
+N/A: 0
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================
