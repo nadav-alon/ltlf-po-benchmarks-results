@@ -1,0 +1,9 @@
+# Commit: 65806f178722953f9f8b33a537587fefc3df59dc
+# Date: 2026-01-24 21:12:51
+# Machine: cn30.hpc.pub.lan
+# OS: Linux 4.18.0-425.13.1.el8_7.x86_64
+# CPU: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+# Cores: 64
+# RAM: 188.57 GB
+test,time,status
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/ltl2dba04.ltlf,1.90883,0

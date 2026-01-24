@@ -329,21 +329,33 @@ def generate_scatter_plot(df, target_dir, job_identifiers):
             plt.annotate(txt, (row[id1], row[id2]), xytext=(3, 3), textcoords='offset points', fontsize=7, alpha=0.8)
 
     # Diagonal line
-    all_times = df['time'].replace(TIMEOUT_PENALTY_MS, pd.NA).dropna()
-    min_val = min(all_times.min() / 2, 1) if not all_times.empty else 1
-    max_val = max(all_times.max() * 2, TIMEOUT_PENALTY_MS)
+    all_times_raw = df['time']
+    has_timeouts = (df['status'] == -2).any()
+    
+    # Filter out the penalty value for scaling calculations if we want to see the "real" data zoom
+    real_times = all_times_raw[df['status'] != -2]
+    
+    if real_times.empty:
+        min_val, max_val = 1, TIMEOUT_PENALTY_MS
+    else:
+        min_val = min(real_times.min() / 2, 1)
+        if has_timeouts:
+            max_val = TIMEOUT_PENALTY_MS * 1.5
+        else:
+            max_val = real_times.max() * 2
     
     plt.plot([min_val, max_val], [min_val, max_val], 'r--', alpha=0.5, label='Equal Performance')
     
     plt.xscale('log'); plt.yscale('log')
+    plt.xlim(min_val, max_val); plt.ylim(min_val, max_val)
     plt.xlabel(f"{label1} Time (ms)")
     plt.ylabel(f"{label2} Time (ms)")
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.grid(True, which="both", ls="-", alpha=0.2)
     
-    # Identify regions
-    plt.annotate(f"{label2} Faster", (max_val/10, max_val/50), color='green', fontweight='bold', alpha=0.3, fontsize=20, rotation=45)
-    plt.annotate(f"{label1} Faster", (max_val/50, max_val/10), color='red', fontweight='bold', alpha=0.3, fontsize=20, rotation=45)
+    # Identify regions - position them relative to the current view
+    plt.text(max_val * 0.1, max_val * 0.01, f"{label2} Faster", color='green', fontweight='bold', alpha=0.3, fontsize=15, rotation=45)
+    plt.text(max_val * 0.01, max_val * 0.1, f"{label1} Faster", color='red', fontweight='bold', alpha=0.3, fontsize=15, rotation=45)
 
     plt.tight_layout()
     plt.savefig(comp_file, dpi=300)
