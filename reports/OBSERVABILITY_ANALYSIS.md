@@ -20,10 +20,14 @@ This report analyzes the impact of **Partial Observability** on LTLf synthesis p
 | **75%** | 180 | 64 | 75 | 3.57 | 35.6% |
 | **100% (PO)** | 180 | 63 | 76 | 3.11 | 35.0% |
 
-### Spot: FO vs 100% PO Comparison
-The scatter plot shows that almost all benchmarks remain on the diagonal line, meaning their synthesis time is identical regardless of observability.
+### Spot: FO vs 100% PO Comparison (Realizable vs Unrealizable)
+By separating benchmarks based on their initial states, we can see that both "solved" and "impossible" paths are handled with minimal timing overhead by Spot.
 
-![Spot Scatter 0% vs 100% PO](../reports/figures/3114671_3114729/scatter_fo_vs_po.png)
+#### Realizable Benchmarks (at FO)
+![Spot Scatter Realizable](../reports/figures/3114671_3114729/scatter_fo_vs_po_realizable.png)
+
+#### Unrealizable Benchmarks (at FO)
+![Spot Scatter Unrealizable](../reports/figures/3114671_3114729/scatter_fo_vs_po_unrealizable.png)
 
 ---
 
@@ -37,10 +41,14 @@ The scatter plot shows that almost all benchmarks remain on the diagonal line, m
 | **75%** | 180 | 54 | 84 | 260.84 | 30.0% |
 | **100% (PO)** | 180 | 54 | 84 | 187.81 | 30.0% |
 
-### Lucas: FO vs 100% PO Comparison
-Similar to Spot, Lucas shows very little performance deviation for solvable benchmarks, with many benchmarks actually finishing faster in the unobservable case due to quicker pruning of the search space.
+### Lucas: FO vs 100% PO Comparison (Realizable vs Unrealizable)
+Lucas exhibits a similar split-scatter profile, showing robustness for the subset of benchmarks it can handle.
 
-![Lucas Scatter 0% vs 100% PO](../reports/figures/3114753_3114786/scatter_fo_vs_po.png)
+#### Realizable Benchmarks (at FO)
+![Lucas Scatter Realizable](../reports/figures/3114753_3114786/scatter_fo_vs_po_realizable.png)
+
+#### Unrealizable Benchmarks (at FO)
+![Lucas Scatter Unrealizable](../reports/figures/3114753_3114786/scatter_fo_vs_po_unrealizable.png)
 
 ---
 

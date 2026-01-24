@@ -301,59 +301,72 @@ def generate_plots(df, job_identifiers=None):
         print(f"Saved: {comp_file}")
 
 def generate_scatter_plot(df, target_dir, job_identifiers):
-    """Generate a scatter plot for FO vs PO comparison if exactly 2 runs provided."""
+    """Generate multiple scatter plots (All, Realizable, Unrealizable)."""
     unique_ids = df['job_id'].unique()
     if len(unique_ids) != 2:
         print(f"Scatter plot requires exactly 2 jobs to compare, found {len(unique_ids)}")
         return
 
-    comp_file = os.path.join(target_dir, "scatter_fo_vs_po.png")
+    # Use first job as the baseline for filtering
+    id1 = unique_ids[0]
     
-    # Pivot data: index = test_name, columns = job_id, values = time
+    # 1. All benchmarks
+    _do_scatter(df, target_dir, "scatter_fo_vs_po_all.png")
+    
+    # 2. Benchmarks that were Realizable in the first job
+    realizable_tests = df[(df['job_id'] == id1) & (df['status'] == 1)]['test_name'].unique()
+    if len(realizable_tests) > 0:
+        sub_real = df[df['test_name'].isin(realizable_tests)]
+        _do_scatter(sub_real, target_dir, "scatter_fo_vs_po_realizable.png", title_suffix="(Realizable at Baseline)")
+        
+    # 3. Benchmarks that were Unrealizable in the first job
+    unrealizable_tests = df[(df['job_id'] == id1) & (df['status'] == 0)]['test_name'].unique()
+    if len(unrealizable_tests) > 0:
+        sub_unreal = df[df['test_name'].isin(unrealizable_tests)]
+        _do_scatter(sub_unreal, target_dir, "scatter_fo_vs_po_unrealizable.png", title_suffix="(Unrealizable at Baseline)")
+
+def _do_scatter(df, target_dir, filename, title_suffix=""):
+    """Internal helper to render a single scatter plot."""
+    unique_ids = df['job_id'].unique()
+    # If filtered to empty, skip
+    if df.empty: return
+
+    comp_file = os.path.join(target_dir, filename)
     pivot = df.pivot_table(index=['benchmark', 'test_name'], columns='job_id', values='time', aggfunc='mean')
     
-    # Get labels for the axes
     id1, id2 = unique_ids[0], unique_ids[1]
     label1 = df[df['job_id'] == id1]['run_label'].iloc[0]
     label2 = df[df['job_id'] == id2]['run_label'].iloc[0]
     
     plt.figure(figsize=(10, 10))
-    plt.suptitle(f"Performance Comparison: {label1} vs {label2}", fontsize=16, fontweight='bold')
+    plt.suptitle(f"Performance Comparison {title_suffix}: {label1} vs {label2}", fontsize=16, fontweight='bold')
     
     colors = plt.rcParams['axes.prop_cycle'].by_key()['color']
     benchmarks = sorted(df['benchmark'].unique())
     b_to_color = {b: colors[i % len(colors)] for i, b in enumerate(benchmarks)}
     
     for b in benchmarks:
+        if b not in pivot.index.get_level_values(0): continue
         sub = pivot.loc[b]
         plt.scatter(sub[id1], sub[id2], label=b, color=b_to_color[b], alpha=0.7, s=80, edgecolors='k')
 
-    # Diagonal line
     all_times_raw = df['time']
     has_timeouts = (df['status'] == -2).any()
-    
-    # Filter out the penalty value for scaling calculations if we want to see the "real" data zoom
     real_times = all_times_raw[df['status'] != -2]
     
     if real_times.empty:
         min_val, max_val = 1, TIMEOUT_PENALTY_MS
     else:
         min_val = max(min(real_times.min() / 2, 1), 0.01)
-        if has_timeouts:
-            max_val = TIMEOUT_PENALTY_MS * 1.5
-        else:
-            max_val = real_times.max() * 2
+        max_val = TIMEOUT_PENALTY_MS * 1.5 if has_timeouts else real_times.max() * 2
     
     plt.plot([min_val, max_val], [min_val, max_val], 'r--', alpha=0.5, label='Equal Performance')
-    
     plt.xscale('log'); plt.yscale('log')
     plt.xlim(min_val, max_val); plt.ylim(min_val, max_val)
-    plt.xlabel(f"{label1} Time (ms)")
-    plt.ylabel(f"{label2} Time (ms)")
+    plt.xlabel(f"{label1} Time (ms)"); plt.ylabel(f"{label2} Time (ms)")
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.grid(True, which="both", ls="-", alpha=0.2)
     
-    # Identify regions - position them relative to the current view
     plt.text(max_val * 0.1, max_val * 0.01, f"{label2} Faster", color='green', fontweight='bold', alpha=0.3, fontsize=15, rotation=45)
     plt.text(max_val * 0.01, max_val * 0.1, f"{label1} Faster", color='red', fontweight='bold', alpha=0.3, fontsize=15, rotation=45)
 
