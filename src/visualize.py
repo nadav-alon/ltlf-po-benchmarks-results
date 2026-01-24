@@ -323,10 +323,6 @@ def generate_scatter_plot(df, target_dir, job_identifiers):
     for b in benchmarks:
         sub = pivot.loc[b]
         plt.scatter(sub[id1], sub[id2], label=b, color=b_to_color[b], alpha=0.7, s=80, edgecolors='k')
-        
-        # Add text labels for individual points
-        for txt, row in sub.iterrows():
-            plt.annotate(txt, (row[id1], row[id2]), xytext=(3, 3), textcoords='offset points', fontsize=7, alpha=0.8)
 
     # Diagonal line
     all_times_raw = df['time']
@@ -338,7 +334,7 @@ def generate_scatter_plot(df, target_dir, job_identifiers):
     if real_times.empty:
         min_val, max_val = 1, TIMEOUT_PENALTY_MS
     else:
-        min_val = min(real_times.min() / 2, 1)
+        min_val = max(min(real_times.min() / 2, 1), 0.01)
         if has_timeouts:
             max_val = TIMEOUT_PENALTY_MS * 1.5
         else:

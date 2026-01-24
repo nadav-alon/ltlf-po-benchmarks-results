@@ -1,0 +1,40 @@
+=========================================
+SLURM Job ID: 3114739
+SLURM Array Job ID: 3114729
+Array Task ID: 99
+Running on node: cn24.hpc.pub.lan
+Testing: spot:ltlf
+Semantics: moore
+Test Dir: full-observability
+Part Dir: po-part-all
+Shard: 3 of 16
+Output file: results/3114729/spot_ltlf/shard_3.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: spot:ltlf
+  Test Dir: full-observability
+  Part Dir: po-part-all
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 3/16
+------------------------------
+Shard 3/16: Running 12 out of 180 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr+_pb_11_pe_.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpuc71oklv/amba_gr+_pb_11_pe_.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmpuc71oklv/amba_gr+_pb_11_pe_.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'stateG10_10' does not match any input or output\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr_pb_5_pe_.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmppab9zhky/amba_gr_pb_5_pe_.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmppab9zhky/amba_gr_pb_5_pe_.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'stateG10_4' does not match any input or output\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/gr_4.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpbx3gsex7/gr_4.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmpbx3gsex7/gr_4.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'MOSpeederMonitor38' does not match any input or output\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/rw_arbiter.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpgkuq3nky/rw_arbiter.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmpgkuq3nky/rw_arbiter.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'r_WL_0' does not match any input or output\n"
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 8
+N/A: 0
+Error: 4
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

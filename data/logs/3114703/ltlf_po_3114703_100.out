@@ -1,0 +1,39 @@
+=========================================
+SLURM Job ID: 3114708
+SLURM Array Job ID: 3114703
+Array Task ID: 100
+Running on node: cn24.hpc.pub.lan
+Testing: spot:ltlf
+Semantics: moore
+Test Dir: full-observability
+Part Dir: po-part-1-2
+Shard: 4 of 16
+Output file: results/3114703/spot_ltlf/shard_4.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: spot:ltlf
+  Test Dir: full-observability
+  Part Dir: po-part-1-2
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 4/16
+------------------------------
+Shard 4/16: Running 11 out of 180 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr+_pb_12_pe_.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpnil5299g/amba_gr+_pb_12_pe_.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmpnil5299g/amba_gr+_pb_12_pe_.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'stateG10_10' does not match any input or output\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr_pb_6_pe_.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpfm4lov71/amba_gr_pb_6_pe_.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmpfm4lov71/amba_gr_pb_6_pe_.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'stateG10_4' does not match any input or output\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/gr_5.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp1bsrmo2_/gr_5.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmp1bsrmo2_/gr_5.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'MOSpeederMonitor38' does not match any input or output\n"
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 8
+N/A: 0
+Error: 3
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

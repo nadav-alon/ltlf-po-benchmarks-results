@@ -1,0 +1,31 @@
+=========================================
+SLURM Job ID: 3114674
+SLURM Array Job ID: 3114671
+Array Task ID: 98
+Running on node: cn30.hpc.pub.lan
+Testing: spot:ltlf
+Semantics: moore
+Test Dir: full-observability
+Part Dir: part
+Shard: 2 of 16
+Output file: results/3114671/spot_ltlf/shard_2.csv
+=========================================
+
+Shard 2/16: Running 12 out of 180 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_decomposed_encode.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp9m15c5d0/amba_decomposed_encode.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmp9m15c5d0/amba_decomposed_encode.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'HMASTER_0' does not match any input or output\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr_pb_10_pe_.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpm3x9zlzj/amba_gr_pb_10_pe_.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmpm3x9zlzj/amba_gr_pb_10_pe_.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'stateG10_9' does not match any input or output\n"
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/collector_v2.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmp9t02aidn/collector_v2.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmp9t02aidn/collector_v2.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'allFinished' does not match any input or output\n"
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 9
+N/A: 0
+Error: 3
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

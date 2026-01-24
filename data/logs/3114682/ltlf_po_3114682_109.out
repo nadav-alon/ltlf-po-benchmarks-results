@@ -1,0 +1,29 @@
+=========================================
+SLURM Job ID: 3114701
+SLURM Array Job ID: 3114682
+Array Task ID: 109
+Running on node: cn24.hpc.pub.lan
+Testing: spot:ltlf
+Semantics: moore
+Test Dir: full-observability
+Part Dir: po-part
+Shard: 13 of 16
+Output file: results/3114682/spot_ltlf/shard_13.csv
+=========================================
+
+Shard 13/16: Running 11 out of 180 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr+_pb_5_pe_.ltlf: Command 'sed 's/X/X[!]/g;s/N/X/g;s/^/(/;s/$/)/' /tmp/tmpajxx7y2q/amba_gr+_pb_5_pe_.ltlf | paste -sd'&' | ltlfsynt --part-file=/tmp/tmpajxx7y2q/amba_gr+_pb_5_pe_.part.spot.part --semantics=moore --real --verbose' returned non-zero exit status 2., b"ltlfsynt:-:1: 'stateG10_4' does not match any input or output\n"
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 10
+N/A: 0
+Error: 1
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================
