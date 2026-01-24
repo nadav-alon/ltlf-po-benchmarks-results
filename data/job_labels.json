@@ -19,5 +19,11 @@
     "3114703": "spot ltlf full observabiliy with more tests and 1/2 unobservables",
     "3114714": "spot ltlf full observabiliy with more tests and 3/4 unobservables",
     "3114729": "spot ltlf full observabiliy with more tests and all unobservables",
+    "3114753": "lucas:belief-states full-observability 0%",
+    "3114764": "lucas:belief-states full-observability 25%",
+    "3114771": "lucas:belief-states full-observability 50%",
+    "3114779": "lucas:belief-states full-observability 50% (dup)",
+    "3114785": "lucas:belief-states full-observability 75%",
+    "3114786": "lucas:belief-states full-observability 100%",
     "9999999": "local test debug run"
 }

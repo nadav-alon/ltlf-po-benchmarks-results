@@ -1,0 +1,24 @@
+# Commit: 1a3b6d46c17a7465f863935354ddf72dd9710ff7
+# Date: 2026-01-24 22:52:55
+# Machine: cn23.hpc.pub.lan
+# Mode: lucas:belief-states
+# Test Dir: full-observability
+# Part Dir: po-part-3-4
+# Semantics: moore
+# Useless Unobservables: 0
+# OS: Linux 4.18.0-425.13.1.el8_7.x86_64
+# CPU: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+# Cores: 64
+# RAM: 188.57 GB
+test,time,status
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/Coffee_efe2feaf.ltlf,21.2922,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/Lights_9cac58d3.ltlf,25.3054,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/abcg_arbiter.ltlf,12.6108,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr+_pb_5_pe_.ltlf,0.0,-1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/arbiter_on_inpchange.ltlf,5.5122,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/jarvis_philippe_484face8_2.ltlf,84.1452,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/lilydemo11.ltlf,4.35365,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/ltl2dba03.ltlf,9.34328,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/ltl2dba19.ltlf,7.34308,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/ltl_1.ltlf,0.0,-1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/test_f3987563_2.ltlf,10.1864,1

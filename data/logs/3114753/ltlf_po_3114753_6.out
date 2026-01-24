@@ -1,0 +1,39 @@
+=========================================
+SLURM Job ID: 3114760
+SLURM Array Job ID: 3114753
+Array Task ID: 6
+Running on node: cn24.hpc.pub.lan
+Testing: lucas:belief-states
+Semantics: moore
+Test Dir: full-observability
+Part Dir: part
+Shard: 6 of 16
+Output file: results/3114753/lucas_belief-states/shard_6.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:belief-states
+  Test Dir: full-observability
+  Part Dir: part
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 6/16
+------------------------------
+Shard 6/16: Running 11 out of 180 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr+_pb_11_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpjna4abhu/amba_gr+_pb_11_pe_.ltlf.dfa /tmp/tmpjna4abhu/amba_gr+_pb_11_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr_pb_6_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmphzwwqhtc/amba_gr_pb_6_pe_.ltlf.dfa /tmp/tmphzwwqhtc/amba_gr_pb_6_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/gr_5.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpim7c7hz4/gr_5.ltlf.dfa /tmp/tmpim7c7hz4/gr_5.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 8
+N/A: 0
+Error: 3
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

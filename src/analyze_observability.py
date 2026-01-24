@@ -6,15 +6,15 @@ import re
 # Config
 RESULTS_DIR = "/home/cowclaw/results_shards/data/results"
 JOBS = {
-    "0%": "3114671",
-    "25%": "3114682",
-    "50%": "3114703",
-    "75%": "3114714",
-    "100%": "3114729"
+    "0%": "3114753",
+    "25%": "3114764",
+    "50%": "3114771",
+    "75%": "3114785",
+    "100%": "3114786"
 }
 
 def load_job_data(job_id):
-    path_pattern = os.path.join(RESULTS_DIR, job_id, "spot_ltlf", "shard_*.csv")
+    path_pattern = os.path.join(RESULTS_DIR, job_id, "lucas_belief-states", "shard_*.csv")
     files = glob.glob(path_pattern)
     all_rows = []
     for f in files:

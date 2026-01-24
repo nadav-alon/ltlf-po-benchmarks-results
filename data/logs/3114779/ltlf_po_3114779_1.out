@@ -1,0 +1,40 @@
+=========================================
+SLURM Job ID: 3114805
+SLURM Array Job ID: 3114779
+Array Task ID: 1
+Running on node: cn23.hpc.pub.lan
+Testing: lucas:belief-states
+Semantics: moore
+Test Dir: full-observability
+Part Dir: po-part-1-2
+Shard: 1 of 16
+Output file: results/3114779/lucas_belief-states/shard_1.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:belief-states
+  Test Dir: full-observability
+  Part Dir: po-part-1-2
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 1/16
+------------------------------
+Shard 1/16: Running 12 out of 180 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/Morning_c92eb242.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpveydr7e3/Morning_c92eb242.ltlf.dfa /tmp/tmpveydr7e3/Morning_c92eb242.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr_pb_12_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpyqilo5oy/amba_gr_pb_12_pe_.ltlf.dfa /tmp/tmpyqilo5oy/amba_gr_pb_12_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/ltl_7.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpr5q6r7j4/ltl_7.ltlf.dfa /tmp/tmpr5q6r7j4/ltl_7.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/workstation_resupply_pb_5_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp_qqtulj7/workstation_resupply_pb_5_pe_.ltlf.dfa /tmp/tmp_qqtulj7/workstation_resupply_pb_5_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 8
+N/A: 0
+Error: 4
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

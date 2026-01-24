@@ -1,0 +1,24 @@
+# Commit: 1a3b6d46c17a7465f863935354ddf72dd9710ff7
+# Date: 2026-01-24 22:51:49
+# Machine: cn30.hpc.pub.lan
+# Mode: lucas:belief-states
+# Test Dir: full-observability
+# Part Dir: po-part-1-4
+# Semantics: moore
+# Useless Unobservables: 0
+# OS: Linux 4.18.0-425.13.1.el8_7.x86_64
+# CPU: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+# Cores: 64
+# RAM: 188.57 GB
+test,time,status
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/Assumptions_a50cadd7_5.ltlf,16.4608,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/HeatingMin_d6c5ac79.ltlf,14.4796,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/Room_a50cadd7.ltlf,7.87541,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_decomposed_tsingle.ltlf,15.3404,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr_pb_4_pe_.ltlf,0.0,-1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/gr_3.ltlf,0.0,-1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/lilydemo04_modified.ltlf,13.0934,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/lilydemo20.ltlf,12.378,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/ltl2dba12.ltlf,7.69399,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/ltl2dba_E.ltlf,7.44243,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/prioritized_arbiter.ltlf,10.4,0

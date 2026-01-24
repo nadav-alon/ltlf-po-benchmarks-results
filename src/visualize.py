@@ -45,18 +45,22 @@ def parse_test_name(test_path):
     elif 'peek_' in test_path:
         match = re.search(r'peek_(\d+)_(\d+)', test_path)
         if match: return 'Private-Peek', (int(match.group(1)), int(match.group(2)))
-    elif 'amba_gr_pb_' in test_path:
-        match = re.search(r'amba_gr_pb_(\d+)', test_path)
-        if match: return 'AMBA', int(match.group(1))
-    elif 'ltl2dba' in test_path:
-        match = re.search(r'ltl2dba(\d+)', test_path)
-        if match: return 'LTL2DBA', int(match.group(1))
-    elif 'workstation_resupply_pb_' in test_path:
-        match = re.search(r'workstation_resupply_pb_(\d+)', test_path)
-        if match: return 'Workstation-Resupply', int(match.group(1))
-    elif 'simple_arbiter' in test_path:
-        return 'Simple-Arbiter', 0
-    return 'Other', test_path.split('/')[-1].replace('.ltlf', '')
+    elif 'amba' in test_path.lower(): return 'AMBA', 0
+    elif 'ltl2dba' in test_path.lower(): return 'LTL2DBA', 0
+    elif 'workstation_resupply' in test_path.lower(): return 'Workstation-Resupply', 0
+    elif 'simple_arbiter' in test_path.lower(): return 'Simple-Arbiter', 0
+    elif 'lilydemo' in test_path.lower(): return 'Lily', 0
+    elif 'arbiter' in test_path.lower(): return 'Arbiter-Zoo', 0
+    elif 'generalized_buffer' in test_path.lower(): return 'Gen-Buffer', 0
+    elif 'load_balancer' in test_path.lower(): return 'Load-Balancer', 0
+    elif 'lift' in test_path.lower(): return 'Lift', 0
+    elif 'robot_grid' in test_path.lower(): return 'Robot-Grid', 0
+    elif 'tsl_smart_home' in test_path.lower() or any(x in test_path for x in ['Alarm', 'Morning', 'Demo1', 'Check']): return 'TSL-Home', 0
+    elif 'collector' in test_path.lower(): return 'Collector', 0
+    elif 'mux' in test_path.lower(): return 'Mux', 0
+    
+    # Default to filename
+    return 'Other', os.path.basename(test_path).replace('.ltlf', '')
 
 def load_data(job_identifiers=None, custom_labels=None):
     all_data = []

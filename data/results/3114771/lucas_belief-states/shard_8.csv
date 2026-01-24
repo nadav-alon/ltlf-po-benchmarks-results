@@ -1,0 +1,24 @@
+# Commit: 1a3b6d46c17a7465f863935354ddf72dd9710ff7
+# Date: 2026-01-24 22:52:09
+# Machine: cn24.hpc.pub.lan
+# Mode: lucas:belief-states
+# Test Dir: full-observability
+# Part Dir: po-part-1-2
+# Semantics: moore
+# Useless Unobservables: 0
+# OS: Linux 4.18.0-425.13.1.el8_7.x86_64
+# CPU: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+# Cores: 64
+# RAM: 188.57 GB
+test,time,status
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/CheckShades_4d4ca5c4.ltlf,4.91522,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/LightsMin_6bea956e.ltlf,16.0399,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/Warnlight_2d1010f8.ltlf,10.9595,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr+_pb_2_pe_.ltlf,12.664,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/amba_gr_pb_8_pe_.ltlf,0.0,-1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/gr_7.ltlf,0.0,-1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/lilydemo08.ltlf,10.0284,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/load_balancer.ltlf,9.92476,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/ltl2dba16.ltlf,6.04203,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/ltl2dba_alpha.ltlf,11.0965,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/full-observability/ltlf/test4_4b82b1f4_1.ltlf,6.25952,0
