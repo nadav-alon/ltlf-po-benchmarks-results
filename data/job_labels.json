@@ -12,5 +12,9 @@
     "3109241": "spot:ltlfilt mealy",
     "3114444": "spot:ltlf-fo moore",
     "3114465": "spot:ltlf + fo moore with 5 useless unobservables",
+    "3114572": "xxxxxxxx",
+    "3114588": "xxxxxxxxx",
+    "3114607": "spot ltlf full observabiliy",
+    "3114618": "spot ltlf full observabiliy with some chosen to be unobservables",
     "9999999": "local test debug run"
 }

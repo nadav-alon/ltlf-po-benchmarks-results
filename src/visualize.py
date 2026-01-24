@@ -45,7 +45,18 @@ def parse_test_name(test_path):
     elif 'peek_' in test_path:
         match = re.search(r'peek_(\d+)_(\d+)', test_path)
         if match: return 'Private-Peek', (int(match.group(1)), int(match.group(2)))
-    return None, None
+    elif 'amba_gr_pb_' in test_path:
+        match = re.search(r'amba_gr_pb_(\d+)', test_path)
+        if match: return 'AMBA', int(match.group(1))
+    elif 'ltl2dba' in test_path:
+        match = re.search(r'ltl2dba(\d+)', test_path)
+        if match: return 'LTL2DBA', int(match.group(1))
+    elif 'workstation_resupply_pb_' in test_path:
+        match = re.search(r'workstation_resupply_pb_(\d+)', test_path)
+        if match: return 'Workstation-Resupply', int(match.group(1))
+    elif 'simple_arbiter' in test_path:
+        return 'Simple-Arbiter', 0
+    return 'Other', test_path.split('/')[-1].replace('.ltlf', '')
 
 def load_data(job_identifiers=None, custom_labels=None):
     all_data = []
@@ -95,6 +106,8 @@ def load_data(job_identifiers=None, custom_labels=None):
                             'impl': impl,
                             'mode': mode,
                             'benchmark': benchmark,
+                            'test_path': row['test'],
+                            'test_name': os.path.basename(row['test']).replace('.ltlf', ''),
                             'value': val,
                             'time': float(row['time']),
                             'status': int(float(row['status']))
@@ -148,7 +161,6 @@ def generate_plots(df, job_identifiers=None):
     
     # Pre-select colors/markers for each legend_label to ensure consistency across plots
     unique_legend_labels = sorted(plot_df['legend_label'].unique())
-    import numpy as np
     
     # Use a standard color cycle if multi-job, otherwise use the fixed mode colors
     if multi_job:
@@ -165,47 +177,52 @@ def generate_plots(df, job_identifiers=None):
     for impl in plot_df['impl'].unique():
         if impl == 'unknown': continue
         filename = os.path.join(target_dir, f"results_{impl}.png")
-        fig = plt.figure(figsize=(15, 12))
         
-        title_info = "Comparison of Specified Runs" if multi_job else f"Job: {job_identifiers}"
+        benchmarks = sorted(plot_df[plot_df['impl'] == impl]['benchmark'].unique())
+        if not benchmarks: continue
+        
+        num_plots = len(benchmarks)
+        cols = 2
+        rows = (num_plots + 1) // 2
+        
+        fig = plt.figure(figsize=(15, 6 * rows))
+        
+        title_info = "Comparison" if multi_job else f"Job: {job_identifiers}"
         fig.suptitle(f"Performance: {impl.capitalize()} ({title_info})", fontsize=16, fontweight='bold')
         
-        # (a) Moving-Target
-        ax1 = fig.add_subplot(221)
-        sub_mt = plot_df[(plot_df['impl'] == impl) & (plot_df['benchmark'] == 'Moving-Target')]
-        if not sub_mt.empty:
-            pivot = sub_mt.groupby(['value', 'legend_label'])['time'].mean().unstack()
-            for label in pivot.columns:
-                ax1.plot(pivot.index, pivot[label], label=label, marker='o', 
-                         color=label_to_color[label], alpha=0.8)
-            ax1.set_yscale('log'); ax1.set_xlabel("n"); ax1.set_ylabel("Time (ms)")
-            ax1.set_title("Moving-Target"); ax1.legend(fontsize=8); ax1.grid(True, alpha=0.3)
+        for i, b_name in enumerate(benchmarks):
+            ax = fig.add_subplot(rows, cols, i + 1)
+            sub = plot_df[(plot_df['impl'] == impl) & (plot_df['benchmark'] == b_name)]
+            
+            if b_name == 'Private-Peek':
+                # Special handling for tuple values
+                sub = sub.copy()
+                sub = sub[sub['value'].apply(lambda x: isinstance(x, (list, tuple)) and len(x) == 2)]
+                if sub.empty: continue
+                sub['x_label'] = sub['value'].apply(lambda x: f"n={x[0]},m={x[1]}")
+                sub['sort_col'] = sub['value'].apply(lambda x: x[0]*100 + x[1])
+                pivot = sub.sort_values('sort_col').groupby(['x_label', 'legend_label'], sort=False)['time'].mean().unstack()
+                pivot.plot(kind='bar', ax=ax, logy=True, width=0.8, color=[label_to_color.get(col, 'gray') for col in pivot.columns])
+                plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
+            elif sub['value'].apply(lambda x: isinstance(x, (int, float))).all():
+                pivot = sub.groupby(['value', 'legend_label'])['time'].mean().unstack()
+                for label in pivot.columns:
+                    ax.plot(pivot.index, pivot[label], label=label, marker='o', 
+                             color=label_to_color.get(label, 'gray'), alpha=0.8)
+                ax.set_yscale('log')
+                ax.set_xlabel("Scale/Parameter")
+            else:
+                pivot = sub.groupby(['value', 'legend_label'])['time'].mean().unstack()
+                pivot.plot(kind='bar', ax=ax, logy=True, width=0.8, color=[label_to_color.get(col, 'gray') for col in pivot.columns])
+                plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
 
-        # (b) Coin-Game
-        ax2 = fig.add_subplot(222)
-        sub_cg = plot_df[(plot_df['impl'] == impl) & (plot_df['benchmark'] == 'Coin-Game')]
-        if not sub_cg.empty:
-            pivot = sub_cg.groupby(['value', 'legend_label'])['time'].mean().unstack()
-            for label in pivot.columns:
-                ax2.plot(pivot.index, pivot[label], label=label, marker='o', 
-                         color=label_to_color[label], alpha=0.8)
-            ax2.set_yscale('log'); ax2.set_xlabel("n"); ax2.set_ylabel("Time (ms)")
-            ax2.set_title("Coin-Game"); ax2.legend(fontsize=8); ax2.grid(True, alpha=0.3)
-
-        # (c) Private-Peek (Spanning bottom row)
-        ax3 = fig.add_subplot(212)
-        sub_pp = plot_df[(plot_df['impl'] == impl) & (plot_df['benchmark'] == 'Private-Peek')].copy()
-        if not sub_pp.empty:
-            sub_pp['x_label'] = sub_pp['value'].apply(lambda x: f"n={x[0]},m={x[1]}")
-            sub_pp['sort_col'] = sub_pp['value'].apply(lambda x: x[0]*100 + x[1])
-            pivot = sub_pp.sort_values('sort_col').groupby(['x_label', 'legend_label'], sort=False)['time'].mean().unstack()
-            pivot.plot(kind='bar', ax=ax3, logy=True, width=0.8, color=[label_to_color[col] for col in pivot.columns])
-            ax3.set_ylabel("Time (ms)")
-            ax3.set_title("Private-Peek (log)"); plt.setp(ax3.get_xticklabels(), rotation=45, ha='right')
-            ax3.legend(fontsize=8, ncol=2)
+            ax.set_ylabel("Time (ms)")
+            ax.set_title(b_name)
+            ax.legend(fontsize=8)
+            ax.grid(True, alpha=0.3)
             
         plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-        plt.subplots_adjust(hspace=0.5)
+        plt.subplots_adjust(hspace=0.4)
         plt.savefig(filename, dpi=300)
         plt.close(fig)
         print(f"Saved: {filename}")
@@ -279,14 +296,74 @@ def generate_plots(df, job_identifiers=None):
         plt.close(fig)
         print(f"Saved: {comp_file}")
 
+def generate_scatter_plot(df, target_dir, job_identifiers):
+    """Generate a scatter plot for FO vs PO comparison if exactly 2 runs provided."""
+    unique_ids = df['job_id'].unique()
+    if len(unique_ids) != 2:
+        print(f"Scatter plot requires exactly 2 jobs to compare, found {len(unique_ids)}")
+        return
+
+    comp_file = os.path.join(target_dir, "scatter_fo_vs_po.png")
+    
+    # Pivot data: index = test_name, columns = job_id, values = time
+    pivot = df.pivot_table(index=['benchmark', 'test_name'], columns='job_id', values='time', aggfunc='mean')
+    
+    # Get labels for the axes
+    id1, id2 = unique_ids[0], unique_ids[1]
+    label1 = df[df['job_id'] == id1]['run_label'].iloc[0]
+    label2 = df[df['job_id'] == id2]['run_label'].iloc[0]
+    
+    plt.figure(figsize=(10, 10))
+    plt.suptitle(f"Performance Comparison: {label1} vs {label2}", fontsize=16, fontweight='bold')
+    
+    colors = plt.rcParams['axes.prop_cycle'].by_key()['color']
+    benchmarks = sorted(df['benchmark'].unique())
+    b_to_color = {b: colors[i % len(colors)] for i, b in enumerate(benchmarks)}
+    
+    for b in benchmarks:
+        sub = pivot.loc[b]
+        plt.scatter(sub[id1], sub[id2], label=b, color=b_to_color[b], alpha=0.7, s=80, edgecolors='k')
+        
+        # Add text labels for individual points
+        for txt, row in sub.iterrows():
+            plt.annotate(txt, (row[id1], row[id2]), xytext=(3, 3), textcoords='offset points', fontsize=7, alpha=0.8)
+
+    # Diagonal line
+    all_times = df['time'].replace(TIMEOUT_PENALTY_MS, pd.NA).dropna()
+    min_val = min(all_times.min() / 2, 1) if not all_times.empty else 1
+    max_val = max(all_times.max() * 2, TIMEOUT_PENALTY_MS)
+    
+    plt.plot([min_val, max_val], [min_val, max_val], 'r--', alpha=0.5, label='Equal Performance')
+    
+    plt.xscale('log'); plt.yscale('log')
+    plt.xlabel(f"{label1} Time (ms)")
+    plt.ylabel(f"{label2} Time (ms)")
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.grid(True, which="both", ls="-", alpha=0.2)
+    
+    # Identify regions
+    plt.annotate(f"{label2} Faster", (max_val/10, max_val/50), color='green', fontweight='bold', alpha=0.3, fontsize=20, rotation=45)
+    plt.annotate(f"{label1} Faster", (max_val/50, max_val/10), color='red', fontweight='bold', alpha=0.3, fontsize=20, rotation=45)
+
+    plt.tight_layout()
+    plt.savefig(comp_file, dpi=300)
+    plt.close()
+    print(f"Saved: {comp_file}")
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Consolidated Visualization Tool")
     parser.add_argument("--job-id", nargs='+', help="Job ID(s) or Identifier(s) to plot. Format for specific filtering: JOB_ID-tool:mode")
     parser.add_argument("--label", nargs='+', help="Custom label(s) for the job entries")
+    parser.add_argument("--scatter", action="store_true", help="Generate FO vs PO scatter plot comparison")
     args = parser.parse_args()
 
     data = load_data(args.job_id, args.label)
     if not data.empty:
         generate_plots(data, args.job_id)
+        if args.scatter:
+            # For scatter plot, we might need a specific output dir
+            job_folder = "_".join(args.job_id).replace(':', '_').replace('-', '_')
+            target_dir = os.path.join(OUTPUT_DIR, job_folder)
+            generate_scatter_plot(data, target_dir, args.job_id)
     else:
         print("No data to plot.")
