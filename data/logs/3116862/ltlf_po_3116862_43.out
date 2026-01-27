@@ -1,0 +1,40 @@
+=========================================
+SLURM Job ID: 3116916
+SLURM Array Job ID: 3116862
+Array Task ID: 43
+Running on node: cn30.hpc.pub.lan
+Testing: lucas:mso
+Semantics: moore
+Test Dir: ltlf-fin-benchmarks
+Part Dir: po-part-all
+Shard: 11 of 16
+Output file: results/3116862/lucas_mso/shard_11.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:mso
+  Test Dir: ltlf-fin-benchmarks
+  Part Dir: po-part-all
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 11/16
+------------------------------
+Shard 11/16: Running 6 out of 99 tests.
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/13.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/chomp_pb_4_6_pe_.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/nim_pb_03_20_pe_.ltlf
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/nim_pb_13_01_pe_.ltlf
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 4
+Other: 2
+N/A: 0
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

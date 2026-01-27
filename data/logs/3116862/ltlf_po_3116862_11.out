@@ -1,0 +1,40 @@
+=========================================
+SLURM Job ID: 3116900
+SLURM Array Job ID: 3116862
+Array Task ID: 11
+Running on node: cn30.hpc.pub.lan
+Testing: lucas:belief-states
+Semantics: moore
+Test Dir: ltlf-fin-benchmarks
+Part Dir: po-part-all
+Shard: 11 of 16
+Output file: results/3116862/lucas_belief-states/shard_11.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:belief-states
+  Test Dir: ltlf-fin-benchmarks
+  Part Dir: po-part-all
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 11/16
+------------------------------
+Shard 11/16: Running 6 out of 99 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/13.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpthkhrep7/13.dfa /tmp/tmpthkhrep7/13.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/chomp_pb_4_6_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpxpgyiw5x/chomp_pb_4_6_pe_.dfa /tmp/tmpxpgyiw5x/chomp_pb_4_6_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/nim_pb_03_20_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpssdm7_iu/nim_pb_03_20_pe_.dfa /tmp/tmpssdm7_iu/nim_pb_03_20_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/nim_pb_13_01_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmptbvtg80p/nim_pb_13_01_pe_.dfa /tmp/tmptbvtg80p/nim_pb_13_01_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 2
+N/A: 0
+Error: 4
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

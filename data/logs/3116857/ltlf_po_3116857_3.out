@@ -1,0 +1,38 @@
+=========================================
+SLURM Job ID: 3116877
+SLURM Array Job ID: 3116857
+Array Task ID: 3
+Running on node: cn30.hpc.pub.lan
+Testing: lucas:belief-states
+Semantics: moore
+Test Dir: ltlf-fin-benchmarks
+Part Dir: po-part-1-2
+Shard: 3 of 16
+Output file: results/3116857/lucas_belief-states/shard_3.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:belief-states
+  Test Dir: ltlf-fin-benchmarks
+  Part Dir: po-part-1-2
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 3/16
+------------------------------
+Shard 3/16: Running 6 out of 99 tests.
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/gfand_pb_10_pe_.ltlf
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/nim_pb_06_14_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpn7qtypxm/nim_pb_06_14_pe_.dfa /tmp/tmpn7qtypxm/nim_pb_06_14_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 1
+Other: 4
+N/A: 0
+Error: 1
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

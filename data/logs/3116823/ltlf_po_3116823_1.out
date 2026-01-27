@@ -1,0 +1,40 @@
+=========================================
+SLURM Job ID: 3116825
+SLURM Array Job ID: 3116823
+Array Task ID: 1
+Running on node: cn23.hpc.pub.lan
+Testing: lucas:belief-states
+Semantics: moore
+Test Dir: ltlf-fin-benchmarks
+Part Dir: part
+Shard: 1 of 16
+Output file: results/3116823/lucas_belief-states/shard_1.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:belief-states
+  Test Dir: ltlf-fin-benchmarks
+  Part Dir: part
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 1/16
+------------------------------
+Shard 1/16: Running 7 out of 99 tests.
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/chomp_pb_2_6_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpx9eqz3za/chomp_pb_2_6_pe_.dfa /tmp/tmpx9eqz3za/chomp_pb_2_6_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/nim_pb_05_09_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmpymp1xlua/nim_pb_05_09_pe_.dfa /tmp/tmpymp1xlua/nim_pb_05_09_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/nim_pb_17_08_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp8qgfcpoe/nim_pb_17_08_pe_.dfa /tmp/tmp8qgfcpoe/nim_pb_17_08_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+Failed to run /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/uright_pb_18_pe_.ltlf: Command '"/RG/rg-fried/alnadav5/lucas/Syft/build/bin/Syft" /tmp/tmp2j5b91o_/uright_pb_18_pe_.dfa /tmp/tmp2j5b91o_/uright_pb_18_pe_.part 0 partial dfa' died with <Signals.SIGSEGV: 11>., b'The number of explicit states: 0\n'
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 3
+N/A: 0
+Error: 4
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

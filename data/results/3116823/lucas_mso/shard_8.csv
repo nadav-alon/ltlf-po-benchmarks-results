@@ -1,0 +1,13 @@
+# Commit: a5209ef2c5dde2e45bfde8565a1f5347d6553b54
+# Date: 2026-01-27 18:46:16
+# Machine: cn30.hpc.pub.lan
+# Mode: lucas:mso
+# Test Dir: ltlf-fin-benchmarks
+# Part Dir: part
+# Semantics: moore
+# Useless Unobservables: 0
+# OS: Linux 4.18.0-425.13.1.el8_7.x86_64
+# CPU: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+# Cores: 64
+# RAM: 188.57 GB
+test,time,status

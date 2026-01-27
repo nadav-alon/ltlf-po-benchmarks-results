@@ -1,0 +1,42 @@
+=========================================
+SLURM Job ID: 3116853
+SLURM Array Job ID: 3116823
+Array Task ID: 43
+Running on node: cn30.hpc.pub.lan
+Testing: lucas:mso
+Semantics: moore
+Test Dir: ltlf-fin-benchmarks
+Part Dir: part
+Shard: 11 of 16
+Output file: results/3116823/lucas_mso/shard_11.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:mso
+  Test Dir: ltlf-fin-benchmarks
+  Part Dir: part
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 11/16
+------------------------------
+Shard 11/16: Running 6 out of 99 tests.
+[lucas] Error: /tmp/tmpqw9ucsvp/13.dfa.quant not found and no source /tmp/tmpqw9ucsvp/13.mona.quant to generate it.
+[lucas] Error: /tmp/tmp9k4u0q5x/33.dfa.quant not found and no source /tmp/tmp9k4u0q5x/33.mona.quant to generate it.
+[lucas] Error: /tmp/tmp3hf3eqbt/chomp_pb_4_6_pe_.dfa.quant not found and no source /tmp/tmp3hf3eqbt/chomp_pb_4_6_pe_.mona.quant to generate it.
+[lucas] Error: /tmp/tmpu8nzn5b8/nim_pb_03_20_pe_.dfa.quant not found and no source /tmp/tmpu8nzn5b8/nim_pb_03_20_pe_.mona.quant to generate it.
+[lucas] Error: /tmp/tmpm8vxq591/nim_pb_13_01_pe_.dfa.quant not found and no source /tmp/tmpm8vxq591/nim_pb_13_01_pe_.mona.quant to generate it.
+[lucas] Error: /tmp/tmpowslexr2/uright_pb_07_pe_.dfa.quant not found and no source /tmp/tmpowslexr2/uright_pb_07_pe_.mona.quant to generate it.
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 0
+Other: 0
+N/A: 0
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

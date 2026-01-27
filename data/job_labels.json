@@ -30,5 +30,9 @@
     "3116651": "spot ltlf full-observability ltlf-fin-benchmarks",
     "3116652": "spot ltlf 50% unobservables ltlf-fin-benchmarks",
     "3116666": "spot ltlf 100% unobservables ltlf-fin-benchmarks",
+    "3116823": "lucas:belief-states & lucas:mso (moore) 0% unobs - ltlf-fin-benchmarks",
+    "3116850": "lucas:mso (moore) 50% unobs - ltlf-fin-benchmarks",
+    "3116857": "lucas:belief-states (moore) 50% unobs - ltlf-fin-benchmarks",
+    "3116862": "lucas:belief-states & lucas:mso (moore) 100% unobs - ltlf-fin-benchmarks",
     "9999999": "local test debug run"
 }
