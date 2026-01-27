@@ -1,0 +1,36 @@
+=========================================
+SLURM Job ID: 3116233
+SLURM Array Job ID: 3116117
+Array Task ID: 107
+Running on node: cn23.hpc.pub.lan
+Testing: spot:ltlf
+Semantics: moore
+Test Dir: lucas
+Part Dir: po-part-all
+Shard: 11 of 16
+Output file: results/3116117/spot_ltlf/shard_11.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: spot:ltlf
+  Test Dir: lucas
+  Part Dir: po-part-all
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 11/16
+------------------------------
+Shard 11/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 0
+Other: 100
+N/A: 0
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

@@ -25,5 +25,7 @@
     "3114779": "lucas:belief-states full-observability 50% (dup)",
     "3114785": "lucas:belief-states full-observability 75%",
     "3114786": "lucas:belief-states full-observability 100%",
+    "3116117": "full observability of lucas tests",
+    "3116131": "full unobservability of lucas tests",
     "9999999": "local test debug run"
 }

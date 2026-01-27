@@ -1,0 +1,36 @@
+=========================================
+SLURM Job ID: 3116270
+SLURM Array Job ID: 3116131
+Array Task ID: 46
+Running on node: cn23.hpc.pub.lan
+Testing: lucas:mso
+Semantics: moore
+Test Dir: lucas
+Part Dir: po-part-0
+Shard: 14 of 16
+Output file: results/3116131/lucas_mso/shard_14.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:mso
+  Test Dir: lucas
+  Part Dir: po-part-0
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 14/16
+------------------------------
+Shard 14/16: Running 101 out of 1617 tests.
+===========
+Statistics:
+===========
+Passed: 1
+Failed: 0
+Timeout: 0
+Other: 100
+N/A: 0
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

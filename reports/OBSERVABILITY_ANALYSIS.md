@@ -1,68 +1,86 @@
-# LTLf Synthesis: Observability Impact Analysis
+# Observability Analysis: FO vs PO (Orig) vs FU
+Comparing Full Observability (FO), Original Partial Observability (PO), and Full Unobservability (FU).
+- **FO (3116131)**: All inputs observable (`po-part-0`)
+- **PO (3104998)**: Original benchmarks (`part`) - *Source of Truth*
+- **FU (3116117)**: All inputs unobservable (`po-part-all`)
 
-This report analyzes the impact of **Partial Observability** on LTLf synthesis performance and realizability. We compared two leading implementations (**Spot** and **Lucas/Syft**) across 180 benchmarks with varying degrees of input observability (0%, 25%, 50%, 75%, and 100% unobservable).
+## Tool: lucas_belief-states
+| Mode | Total | Realizable | Unrealizable | Timeouts | Errors | Avg Time (ms) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| FO | 1617 | 704 | 112 | 799 | 2 | 13445.54 |
+| PO (Orig) | 1617 | 721 | 119 | 775 | 2 | 5121.36 |
+| FU | 1617 | 1012 | 428 | 175 | 2 | 15321.09 |
 
-## Key Findings
+### Realizability Transitions
+- **FO (Real) -> PO (Unreal)**: 1 benchmarks
+- **PO (Real) -> FU (Unreal)**: 1 benchmarks
+- **FO (Real) -> FU (Unreal)**: 2 benchmarks
 
-1.  **Search Overhead is Negligible**: For benchmarks that remain solvable, neither tool experiences significant computational overhead from partial observability. The strategies found are either "blindable" or quickly detected as impossible.
-2.  **Realizability is the Primary Bottleneck**: The main cost of partial observability is the loss of realizability. Benchmarks that require reacting to environment inputs (like logic conversions and games) quickly become unrealizable as uncertainty increases.
-3.  **Fast Unrealizability Detection**: Both tools detect unrealizable cases significantly faster than they solve realizable ones, leading to an overall *decrease* in average execution time as observability drops.
+### Runtime: FO vs PO (Orig)
+- Count (Realizable in both): 703
+- Median Slowdown (FO -> PO): 0.94x
 
----
+### Runtime: PO (Orig) vs FU
+- Count (Realizable in both): 720
+- Median Slowdown (PO -> FU): 0.83x
 
-## 1. Performance Overview: Spot (`spot:ltlf`)
-
-| Observability | Total Tests | Realizable | Unrealizable | Avg Time (ms) | Realizability % |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **0% (FO)** | 180 | 73 | 59 | 16.27 | 40.6% |
-| **25%** | 180 | 66 | 71 | 15.96 | 36.7% |
-| **50%** | 180 | 64 | 75 | 8.77 | 35.6% |
-| **75%** | 180 | 64 | 75 | 3.57 | 35.6% |
-| **100% (PO)** | 180 | 63 | 76 | 3.11 | 35.0% |
-
-### Spot: FO vs 100% PO Comparison (Realizable vs Unrealizable)
-By separating benchmarks based on their initial states, we can see that both "solved" and "impossible" paths are handled with minimal timing overhead by Spot.
-
-#### Realizable Benchmarks (at FO)
-![Spot Scatter Realizable](../reports/figures/3114671_3114729/scatter_fo_vs_po_realizable.png)
-
-#### Unrealizable Benchmarks (at FO)
-![Spot Scatter Unrealizable](../reports/figures/3114671_3114729/scatter_fo_vs_po_unrealizable.png)
-
----
-
-## 2. Performance Overview: Lucas (`lucas:belief-states`)
-
-| Observability | Total Tests | Realizable | Unrealizable | Avg Time (ms) | Realizability % |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **0% (FO)** | 180 | 66 | 45 | 453.64 | 36.7% |
-| **25%** | 180 | 54 | 84 | 443.04 | 30.0% |
-| **50%** | 180 | 54 | 84 | 413.41 | 30.0% |
-| **75%** | 180 | 54 | 84 | 260.84 | 30.0% |
-| **100% (PO)** | 180 | 54 | 84 | 187.81 | 30.0% |
-
-### Lucas: FO vs 100% PO Comparison (Realizable vs Unrealizable)
-Lucas exhibits a similar split-scatter profile, showing robustness for the subset of benchmarks it can handle.
-
-#### Realizable Benchmarks (at FO)
-![Lucas Scatter Realizable](../reports/figures/3114753_3114786/scatter_fo_vs_po_realizable.png)
-
-#### Unrealizable Benchmarks (at FO)
-![Lucas Scatter Unrealizable](../reports/figures/3114753_3114786/scatter_fo_vs_po_unrealizable.png)
+### Performance Comparison Graph
+| FO vs PO (Orig) | PO (Orig) vs FU |
+| :---: | :---: |
+| ![lucas_belief-states FO vs PO](figures/3116131_lucas_belief_states_3104998_lucas_belief_states/scatter_fo_vs_po_all.png) | ![lucas_belief-states PO vs FU](figures/3104998_lucas_belief_states_3116117_lucas_belief_states/scatter_fo_vs_po_all.png) |
 
 ---
 
-## 3. Combined Scalability Trends
+## Tool: lucas_mso
+| Mode | Total | Realizable | Unrealizable | Timeouts | Errors | Avg Time (ms) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| FO | 1617 | 1181 | 434 | 2 | 0 | 226.74 |
+| PO (Orig) | 1617 | 1176 | 435 | 6 | 0 | 463.19 |
+| FU | 1617 | 1023 | 338 | 256 | 0 | 10.52 |
 
-The following grids show the execution time across all 5 observability levels for different benchmark families. Notice the flat lines for most families, indicating that observability level does not scale execution time exponentially for these types of specifications.
+### Realizability Transitions
+- **FO (Real) -> PO (Unreal)**: 1 benchmarks
+- **PO (Real) -> FU (Unreal)**: 3 benchmarks
+- **FO (Real) -> FU (Unreal)**: 4 benchmarks
 
-### Spot Trend Grid
-![Spot All Levels](../reports/figures/3114671_3114682_3114703_3114714_3114729/results_spot.png)
+### Runtime: FO vs PO (Orig)
+- Count (Realizable in both): 1176
+- Median Slowdown (FO -> PO): 0.86x
 
-### Lucas Trend Grid
-![Lucas All Levels](../reports/figures/3114753_3114764_3114771_3114785_3114786/results_lucas.png)
+### Runtime: PO (Orig) vs FU
+- Count (Realizable in both): 1023
+- Median Slowdown (PO -> FU): 0.43x
+
+### Performance Comparison Graph
+| FO vs PO (Orig) | PO (Orig) vs FU |
+| :---: | :---: |
+| ![lucas_mso FO vs PO](figures/3116131_lucas_mso_3104998_lucas_mso/scatter_fo_vs_po_all.png) | ![lucas_mso PO vs FU](figures/3104998_lucas_mso_3116117_lucas_mso/scatter_fo_vs_po_all.png) |
 
 ---
 
-## Conclusion
-The results suggest that modern LTLf synthesis algorithms for partial observability (Belief-States and Projection) are highly efficient. The limiting factor for PO synthesis in industrial settings is not the tool's performance, but rather the **strength of the specification**—specs must be robust enough to allow for winning strategies that do not rely on hidden environment signals.
+## Tool: spot_ltlf
+| Mode | Total | Realizable | Unrealizable | Timeouts | Errors | Avg Time (ms) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| FO | 1617 | 1183 | 434 | 0 | 0 | 36.24 |
+| PO (Orig) | 1617 | 1180 | 435 | 2 | 0 | 20.05 |
+| FU | 1617 | 1172 | 440 | 5 | 0 | 7.69 |
+
+### Realizability Transitions
+- **FO (Real) -> PO (Unreal)**: 1 benchmarks
+- **PO (Real) -> FU (Unreal)**: 5 benchmarks
+- **FO (Real) -> FU (Unreal)**: 6 benchmarks
+
+### Runtime: FO vs PO (Orig)
+- Count (Realizable in both): 1180
+- Median Slowdown (FO -> PO): 1.00x
+
+### Runtime: PO (Orig) vs FU
+- Count (Realizable in both): 1172
+- Median Slowdown (PO -> FU): 1.00x
+
+### Performance Comparison Graph
+| FO vs PO (Orig) | PO (Orig) vs FU |
+| :---: | :---: |
+| ![spot_ltlf FO vs PO](figures/3116131_spot_ltlf_3104998_spot_ltlf/scatter_fo_vs_po_all.png) | ![spot_ltlf PO vs FU](figures/3104998_spot_ltlf_3116117_spot_ltlf/scatter_fo_vs_po_all.png) |
+
+---
