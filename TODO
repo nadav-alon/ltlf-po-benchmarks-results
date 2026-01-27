@@ -1,0 +1,5 @@
+TODO: 
+    - spot:ltlf vs lucas:mso + auotomaton construction time + lucas:belief-statles + automaton for belief states
+    - tlsf-fin same as above
+    - spot:ltlf vs spot:ltlf-fo, lucas:mso vs lucas:mso-fo, lucas:belief-states vs lucas:belief-states-fo
+    - graphs comparing all of these
