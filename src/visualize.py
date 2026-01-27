@@ -127,7 +127,7 @@ def setup_plot_style():
         'colors': {
             'belief-states': 'blue', 'direct': 'red', 'projection-based': 'red', 
             'belief': 'blue', 'mso': 'green', 'ltl': 'black', 'ltlf': 'purple', 
-            'ltlfilt': 'orange', 'ltlf-fo': 'brown'
+            'ltlfilt': 'orange'
         },
         'markers': {'christian': 'o', 'lucas': 'x', 'spot': 's'},
         'linestyles': {'christian': '-', 'lucas': '--', 'spot': ':'}
@@ -240,7 +240,7 @@ def generate_plots(df, job_identifiers=None):
         m_map = {
             'belief-states': 'Belief States', 'projection-based': 'Projection-Based', 
             'mso': 'MSO', 'belief': 'Belief', 'direct': 'Direct', 
-            'ltl': 'LTL', 'ltlf': 'LTLf', 'ltlfilt': 'LTLfilt', 'ltlf-fo': 'LTLf-FO'
+            'ltl': 'LTL', 'ltlf': 'LTLf', 'ltlfilt': 'LTLfilt'
         }
 
         # (a) Moving-Target

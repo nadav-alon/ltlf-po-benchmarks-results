@@ -23,7 +23,6 @@ def get_label(impl, mode):
         if mode == 'ltl': return "s_ltl"
         elif mode == 'ltlf': return "s_ltf"
         elif mode == 'ltlfilt': return "s_flt"
-        elif mode == 'ltlf-fo': return "s_fo"
         return f"s_{mode}"
     return f"{impl[0]}_{mode}" if impl else f"?_{mode}"
 
@@ -122,27 +121,9 @@ def run_analysis(grouped_results, job_id=None, output_inconsistent=None):
             s = res[0]
             if s not in [0, 1]: continue
             
-            # Special case for ltlf-fo: if it's realizable but the benchmark 
-            # is tagged as N/A in the results (meaning it was unrealizable in PO),
-            # we don't treat it as a 'conflict' with the 0 from the source of truth.
-            if l == "s_fo" and s == 1:
-                # We need a way to know if it's N/A. Since we don't have the status 
-                # -3 here if it actually ran and returned 1, we rely on the user's 
-                # intention. If FO is 1 and others are 0, and FO is specifically 
-                # for performance cost, we allow this discrepancy.
-                pass 
-            
             outcomes.append(s)
             
         if len(set(outcomes)) > 1:
-            # If the discrepancy is just s_fo = 1 vs others = 0, it's expected
-            # and not a 'bug' in the solver logic itself.
-            if len(set(outcomes)) == 2 and 1 in outcomes and 0 in outcomes:
-                has_fo_realizable = any(res[0] == 1 for l, res in results.items() if l == "s_fo")
-                has_others_unrealizable = any(res[0] == 0 for l, res in results.items() if l != "s_fo")
-                if has_fo_realizable and has_others_unrealizable:
-                    continue # Valid difference between FO and PO
-            
             inconsistent_tests.append(test)
 
     if inconsistent_tests:
