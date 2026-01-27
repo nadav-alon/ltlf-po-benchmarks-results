@@ -1,0 +1,37 @@
+=========================================
+SLURM Job ID: 3116655
+SLURM Array Job ID: 3116651
+Array Task ID: 98
+Running on node: cn23.hpc.pub.lan
+Testing: spot:ltlf
+Semantics: moore
+Test Dir: ltlf-fin-benchmarks
+Part Dir: part
+Shard: 2 of 16
+Output file: results/3116651/spot_ltlf/shard_2.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: spot:ltlf
+  Test Dir: ltlf-fin-benchmarks
+  Part Dir: part
+  Semantics: moore
+  Useless Unobservables: 0
+  Shard: 2/16
+------------------------------
+Shard 2/16: Running 7 out of 99 tests.
+Timeout for /RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/chomp_pb_2_7_pe_.ltlf
+===========
+Statistics:
+===========
+Passed: 0
+Failed: 0
+Timeout: 1
+Other: 6
+N/A: 0
+Error: 0
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

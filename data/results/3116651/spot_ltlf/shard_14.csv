@@ -1,0 +1,19 @@
+# Commit: ba68ee104fb8d171712b872cb4f5a029f7de027f
+# Date: 2026-01-27 16:49:33
+# Machine: cn30.hpc.pub.lan
+# Mode: spot:ltlf
+# Test Dir: ltlf-fin-benchmarks
+# Part Dir: part
+# Semantics: moore
+# Useless Unobservables: 0
+# OS: Linux 4.18.0-425.13.1.el8_7.x86_64
+# CPU: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+# Cores: 64
+# RAM: 188.57 GB
+test,time,status
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/151.ltlf,0.587981,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/chomp_pb_2_2_pe_.ltlf,5.4418299999999995,0
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/countersDouble_pb_02_pe_.ltlf,1.86718,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/nim_pb_04_08_pe_.ltlf,9.30883,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/nim_pb_15_19_pe_.ltlf,14533.300000000001,1
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/ltlf-fin-benchmarks/ltlf/uright_pb_13_pe_.ltlf,1.63692,1

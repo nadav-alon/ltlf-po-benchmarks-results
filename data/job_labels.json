@@ -27,5 +27,8 @@
     "3114786": "lucas:belief-states full-observability 100%",
     "3116117": "full observability of lucas tests",
     "3116131": "full unobservability of lucas tests",
+    "3116651": "spot ltlf full-observability ltlf-fin-benchmarks",
+    "3116652": "spot ltlf 50% unobservables ltlf-fin-benchmarks",
+    "3116666": "spot ltlf 100% unobservables ltlf-fin-benchmarks",
     "9999999": "local test debug run"
 }
