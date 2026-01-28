@@ -1,0 +1,113 @@
+# Commit: 65c6f5e44d4b46dc66f5ae56165b30fe6734a4bb
+# Date: 2026-01-28 06:04:36
+# Machine: cn30.hpc.pub.lan
+# Mode: lucas:mso
+# Test Dir: lucas
+# Part Dir: part
+# Semantics: moore
+# OS: Linux 4.18.0-425.13.1.el8_7.x86_64
+# CPU: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+# Cores: 64
+# RAM: 188.57 GB
+test,time,automaton_time,status,verified,time_source
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/coins_9.ltlf,0,0.0,-1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_1_22.ltlf,14.0632,26.660680770874023,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_1_37.ltlf,14.1246,26.412248611450195,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_1_51.ltlf,14.2719,24.080991744995117,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_1_66.ltlf,13.2609,25.704622268676758,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_1_80.ltlf,14.42,26.475906372070312,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_1_95.ltlf,13.0436,25.843381881713867,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_2_19.ltlf,12.6485,31.912565231323242,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_2_33.ltlf,15.6238,33.27178955078125,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_2_48.ltlf,13.893,28.92899513244629,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_2_62.ltlf,14.741,32.68098831176758,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_2_77.ltlf,14.4032,33.83493423461914,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_2_91.ltlf,15.6267,34.1796875,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_3_15.ltlf,15.4237,35.5982780456543,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_3_3.ltlf,16.1983,38.22445869445801,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_3_44.ltlf,15.9314,36.85450553894043,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_3_59.ltlf,16.1619,36.321401596069336,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_3_73.ltlf,16.3671,42.76299476623535,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_3_88.ltlf,16.3374,38.81645202636719,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_4_11.ltlf,17.7651,46.96226119995117,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_4_26.ltlf,17.4973,45.48454284667969,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_4_40.ltlf,18.0959,47.68872261047363,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_4_55.ltlf,17.696,45.14789581298828,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_4_7.ltlf,17.707,47.66964912414551,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_4_84.ltlf,17.5563,47.744035720825195,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_1_4_99.ltlf,17.4098,46.86260223388672,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_22.ltlf,25.9031,46.91672325134277,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_37.ltlf,38.2025,55.41658401489258,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_51.ltlf,34.2712,47.6069450378418,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_66.ltlf,35.6352,46.68402671813965,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_80.ltlf,34.2367,47.69563674926758,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_1_95.ltlf,33.1484,54.43596839904785,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_19.ltlf,30.6136,63.448429107666016,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_33.ltlf,35.3718,64.42379951477051,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_48.ltlf,35.9437,73.55165481567383,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_62.ltlf,29.6102,62.03484535217285,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_77.ltlf,33.1392,63.5831356048584,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_2_91.ltlf,31.9078,70.82653045654297,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_15.ltlf,30.0015,82.25464820861816,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_3.ltlf,32.4968,79.75244522094727,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_44.ltlf,34.643,88.59992027282715,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_59.ltlf,35.6443,81.95185661315918,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_73.ltlf,36.2604,83.57930183410645,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_3_88.ltlf,30.6858,80.3995132446289,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_11.ltlf,33.9559,102.8740406036377,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_26.ltlf,41.6244,107.99431800842285,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_40.ltlf,43.9896,115.02528190612793,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_55.ltlf,41.8477,107.53369331359863,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_7.ltlf,43.6672,113.59453201293945,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_84.ltlf,46.1872,117.1419620513916,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_2_4_99.ltlf,36.5322,104.65455055236816,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_22.ltlf,136.743,112.49876022338867,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_37.ltlf,104.508,110.79549789428711,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_51.ltlf,117.012,127.8080940246582,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_66.ltlf,71.0886,121.41728401184082,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_80.ltlf,60.12,119.1704273223877,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_1_95.ltlf,116.324,119.34065818786621,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_19.ltlf,83.0338,166.5518283843994,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_33.ltlf,130.418,155.74002265930176,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_48.ltlf,100.007,160.21442413330078,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_62.ltlf,124.272,165.5864715576172,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_77.ltlf,110.452,155.88879585266113,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_2_91.ltlf,116.561,153.36298942565918,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_15.ltlf,120.53,208.5273265838623,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_3.ltlf,96.0262,194.14901733398438,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_44.ltlf,159.181,195.59836387634277,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_59.ltlf,103.659,193.4504508972168,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_73.ltlf,143.887,193.69983673095703,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_3_88.ltlf,136.219,209.58709716796875,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_11.ltlf,145.172,263.5018825531006,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_26.ltlf,160.158,251.91140174865723,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_40.ltlf,103.129,241.50872230529785,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_55.ltlf,130.497,236.8941307067871,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_7.ltlf,123.099,229.47096824645996,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_84.ltlf,107.248,242.23947525024414,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_3_4_99.ltlf,101.532,221.35400772094727,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_22.ltlf,750.816,332.22436904907227,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_37.ltlf,298.284,250.2424716949463,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_51.ltlf,611.531,286.72266006469727,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_66.ltlf,597.619,298.6304759979248,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_80.ltlf,598.898,301.03540420532227,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_1_95.ltlf,416.067,323.3010768890381,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_19.ltlf,478.152,390.69223403930664,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_33.ltlf,830.099,388.7491226196289,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_48.ltlf,538.058,363.45624923706055,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_62.ltlf,465.063,405.0929546356201,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_77.ltlf,480.674,374.88865852355957,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_2_91.ltlf,577.254,385.5717182159424,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_15.ltlf,719.936,476.3786792755127,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_3.ltlf,757.918,475.05998611450195,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_44.ltlf,739.009,437.481164932251,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_59.ltlf,683.945,446.9118118286133,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_73.ltlf,1059.41,489.0899658203125,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_3_88.ltlf,714.429,445.45745849609375,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_11.ltlf,593.49,514.5256519317627,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_26.ltlf,507.186,513.0696296691895,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_40.ltlf,838.247,547.6813316345215,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_55.ltlf,807.353,585.2303504943848,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_7.ltlf,745.802,525.0699520111084,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_84.ltlf,734.202,538.0098819732666,1,,tool
+/RG/rg-fried/alnadav5/ltlf-po-benchmarks/lucas/ltlf/peek/peek_4_4_99.ltlf,664.561,555.011510848999,1,,tool

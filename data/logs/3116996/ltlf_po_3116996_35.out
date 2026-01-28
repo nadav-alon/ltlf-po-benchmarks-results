@@ -1,0 +1,75 @@
+=========================================
+SLURM Job ID: 3117106
+SLURM Array Job ID: 3116996
+Array Task ID: 35
+Running on node: cn30.hpc.pub.lan
+Testing: lucas:mso
+Semantics: moore
+Test Dir: lucas
+Part Dir: po-part-all
+Shard: 3 of 16
+Output file: results/3116996/lucas_mso/shard_3.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:mso
+  Test Dir: lucas
+  Part Dir: po-part-all
+  Semantics: moore
+  Shard: 3/16
+------------------------------
+Shard 3/16: Running 101 out of 1617 tests.
+[lucas] MONA failed on /tmp/tmphv259vvq/coins_5.mona.quant:
+
+[lucas] Error: /tmp/tmphv259vvq/coins_5.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmpj52q_v26/peek_4_2_3.mona.quant:
+
+[lucas] Error: /tmp/tmpj52q_v26/peek_4_2_3.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmp3i8qp5x7/peek_4_2_44.mona.quant:
+
+[lucas] Error: /tmp/tmp3i8qp5x7/peek_4_2_44.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmpnsr32899/peek_4_3_11.mona.quant:
+
+[lucas] Error: /tmp/tmpnsr32899/peek_4_3_11.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmpz3cprmyh/peek_4_3_26.mona.quant:
+
+[lucas] Error: /tmp/tmpz3cprmyh/peek_4_3_26.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmprzn63e2p/peek_4_3_40.mona.quant:
+
+[lucas] Error: /tmp/tmprzn63e2p/peek_4_3_40.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmp16yx5xoc/peek_4_3_7.mona.quant:
+
+[lucas] Error: /tmp/tmp16yx5xoc/peek_4_3_7.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmpohi_d8bn/peek_4_3_84.mona.quant:
+
+[lucas] Error: /tmp/tmpohi_d8bn/peek_4_3_84.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmp1baasyq9/peek_4_4_22.mona.quant:
+
+[lucas] Error: /tmp/tmp1baasyq9/peek_4_4_22.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmpty88zapi/peek_4_4_37.mona.quant:
+
+[lucas] Error: /tmp/tmpty88zapi/peek_4_4_37.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmpi51b4p8_/peek_4_4_51.mona.quant:
+
+[lucas] Error: /tmp/tmpi51b4p8_/peek_4_4_51.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmp0y50064j/peek_4_4_66.mona.quant:
+
+[lucas] Error: /tmp/tmp0y50064j/peek_4_4_66.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmpahnbodxl/peek_4_4_80.mona.quant:
+
+[lucas] Error: /tmp/tmpahnbodxl/peek_4_4_80.dfa.quant not found. Preprocess may have failed.
+[lucas] MONA failed on /tmp/tmp_vgud8to/peek_4_4_95.mona.quant:
+
+[lucas] Error: /tmp/tmp_vgud8to/peek_4_4_95.dfa.quant not found. Preprocess may have failed.
+===========
+Statistics:
+===========
+Realizable: 67
+Unrealizable: 20
+Timeout: 0
+Error: 14
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================

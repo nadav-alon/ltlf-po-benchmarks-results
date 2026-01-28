@@ -25,8 +25,8 @@
     "3114779": "lucas:belief-states full-observability 50% (dup)",
     "3114785": "lucas:belief-states full-observability 75%",
     "3114786": "lucas:belief-states full-observability 100%",
-    "3116117": "full observability of lucas tests",
-    "3116131": "full unobservability of lucas tests",
+    "3116117": "full unobservability of lucas tests",
+    "3116131": "full observability of lucas tests",
     "3116651": "spot ltlf full-observability ltlf-fin-benchmarks",
     "3116652": "spot ltlf 50% unobservables ltlf-fin-benchmarks",
     "3116666": "spot ltlf 100% unobservables ltlf-fin-benchmarks",
@@ -34,5 +34,9 @@
     "3116850": "lucas:mso (moore) 50% unobs - ltlf-fin-benchmarks",
     "3116857": "lucas:belief-states (moore) 50% unobs - ltlf-fin-benchmarks",
     "3116862": "lucas:belief-states & lucas:mso (moore) 100% unobs - ltlf-fin-benchmarks",
+    "3116921": "spot variants moore po - lucas benchmarks",
+    "3116994": "lucas:belief-states & lucas:mso moore fo - lucas benchmarks",
+    "3116995": "lucas:belief-states & lucas:mso moore po - lucas benchmarks",
+    "3116996": "lucas:belief-states & lucas:mso moore fu - lucas benchmarks",
     "9999999": "local test debug run"
 }

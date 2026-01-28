@@ -1,0 +1,37 @@
+=========================================
+SLURM Job ID: 3117026
+SLURM Array Job ID: 3116994
+Array Task ID: 32
+Running on node: cn30.hpc.pub.lan
+Testing: lucas:mso
+Semantics: moore
+Test Dir: lucas
+Part Dir: po-part-0
+Shard: 0 of 16
+Output file: results/3116994/lucas_mso/shard_0.csv
+=========================================
+
+Starting Run with Parameters:
+  Mode: lucas:mso
+  Test Dir: lucas
+  Part Dir: po-part-0
+  Semantics: moore
+  Shard: 0/16
+------------------------------
+Shard 0/16: Running 102 out of 1617 tests.
+[lucas] MONA failed on /tmp/tmpxff8_k87/coins_10.mona.quant:
+token too large, exceeds YYLMAX
+
+[lucas] Error: /tmp/tmpxff8_k87/coins_10.dfa.quant not found. Preprocess may have failed.
+===========
+Statistics:
+===========
+Realizable: 72
+Unrealizable: 29
+Timeout: 0
+Error: 1
+Inconsistent: 0
+
+=========================================
+✓ Test completed successfully
+=========================================
